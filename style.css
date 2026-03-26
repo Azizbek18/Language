@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    margin: 0;
+    background-color: #FAF8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.kirish {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 450px;
+    padding: 50px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 24px 0px #4F46E514;
+
+}
+
+.bosh {
+    text-align: center;
+}
+
+.texts h3 {
+    margin: 0;
+}
+
+.texts p {
+    margin-top: 8px;
+}
+
+.texts {
+    padding-top: 30px;
+}
+
+.input1 {
+    background-color: #FAF8FF;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+
+}
+
+.input-con {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input1 i {
+    color: #777587;
+}
+
+.input1 input {
+    border: none;
+    background-color: #FAF8FF;
+    width: 100%;
+    outline: none;
+    padding: 0px 20px;
+}
+
+.input-con p {
+    color: #464555;
+    font-size: 13px;
+}
+
+.input2-item p:last-child {
+    color: #3525CD;
+    font-weight: 600;
+}
+
+.input2-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kirish-btn {
+    box-shadow: 0px 4px 6px -4px #3525CD1A;
+    box-shadow: 0px 10px 15px -3px #3525CD1A;
+    background: linear-gradient(90deg, #4F46E5 0%, #3525CD 100%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+}
+.foot p:last-child{
+    color: #3525CD;
+    font-weight: 600;
+    margin: 0;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
