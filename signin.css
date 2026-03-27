@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter"
+}
+
+body {
+    margin: 0;
+    background-color: #FAF8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.img-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.title-con {
+    text-align: center;
+}
+
+.title-con h1 {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.title-con p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.text-con {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text-con h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.text-con p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: #464555;
+}
+
+.user {
+    width: 16px;
+    height: 16px;
+    color: #464555;
+}
+
+.name p {
+    color: #464555;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.name-input input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.name-input {
+    background-color: #F4F3FB;
+    padding: 15px 10px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.letter {
+    width: 16px;
+    height: 16px;
+    color: #464555;
+}
+
+.name {
+    width: 100%;
+}
+
+.email p {
+    color: #464555;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.email-input input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.email-input {
+    background-color: #F4F3FB;
+    padding: 15px 10px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email {
+    width: 100%;
+}
+
+.password p {
+    color: #464555;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.password-input input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+}
+
+.password-input {
+    background-color: #F4F3FB;
+    padding: 15px 10px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password {
+    width: 100%;
+}
+
+.password-accept p {
+    color: #464555;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.password-input input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+}
+
+.password-accept-input {
+    background-color: #F4F3FB;
+    padding: 15px 10px;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.password-accept {
+    width: 100%;
+}
+
+.check {
+    color: green;
+    font-size: 20px;
+}
+
+input {
+    border: none;
+    background-color: #F4F3FB;
+    outline: none;
+    font-size: 15px;
+}
+
+.lock {
+    color: gray;
+}
+
+.shield {
+    color: gray;
+}
+
+.shartlar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #3525CD;
+}
+
+.btn-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-con button {
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3525CD;
+    color: white;
+    font-size: 18px;
+}
+
+.shartlar input {
+    width: 16px;
+    height: 16px;
+}
