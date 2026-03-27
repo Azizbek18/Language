@@ -1,27 +1,49 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="12" y="2" width="56" height="56" rx="12" fill="#4F46E5"/>
+<<<<<<< HEAD
 <g filter="url(#filter0_dd_1_72)">
+=======
+<g filter="url(#filter0_dd_1_18)">
+>>>>>>> 7207ea9c1b546bbd34f981f7056aa7ed72b84cde
 <rect x="12" y="2" width="56" height="56" rx="12" fill="white" fill-opacity="0.01" shape-rendering="crispEdges"/>
 </g>
 <path d="M48.9795 25.8936C48.9795 26.7822 48.8306 27.6392 48.5327 28.4644C48.2349 29.2896 47.7783 30.0195 47.1631 30.6543C46.5478 31.2891 45.7666 31.7944 44.8193 32.1704C43.8721 32.5464 42.749 32.7344 41.4502 32.7344H36.3232V40H32.0019V19.3604H41.2744C42.5928 19.3604 43.7353 19.519 44.7021 19.8364C45.6689 20.1538 46.4697 20.6006 47.1045 21.1768C47.7392 21.7529 48.2104 22.4414 48.5181 23.2422C48.8257 24.043 48.9795 24.9268 48.9795 25.8936ZM44.6289 25.9668C44.6289 24.9023 44.3091 24.0942 43.6694 23.5425C43.0298 22.9907 42.0703 22.7148 40.791 22.7148H36.3232V29.4092H40.9082C41.5527 29.4092 42.1069 29.3262 42.5708 29.1602C43.0347 28.9941 43.4204 28.7598 43.728 28.457C44.0356 28.1543 44.2627 27.7905 44.4092 27.3657C44.5557 26.9409 44.6289 26.4746 44.6289 25.9668Z" fill="white"/>
 <defs>
+<<<<<<< HEAD
 <filter id="filter0_dd_1_72" x="0" y="0" width="80" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect1_dropShadow_1_72"/>
+=======
+<filter id="filter0_dd_1_18" x="0" y="0" width="80" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect1_dropShadow_1_18"/>
+>>>>>>> 7207ea9c1b546bbd34f981f7056aa7ed72b84cde
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="3"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0.207843 0 0 0 0 0.145098 0 0 0 0 0.803922 0 0 0 0.2 0"/>
+<<<<<<< HEAD
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_72"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="3" operator="erode" in="SourceAlpha" result="effect2_dropShadow_1_72"/>
+=======
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_18"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="3" operator="erode" in="SourceAlpha" result="effect2_dropShadow_1_18"/>
+>>>>>>> 7207ea9c1b546bbd34f981f7056aa7ed72b84cde
 <feOffset dy="10"/>
 <feGaussianBlur stdDeviation="7.5"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0.207843 0 0 0 0 0.145098 0 0 0 0 0.803922 0 0 0 0.2 0"/>
+<<<<<<< HEAD
 <feBlend mode="normal" in2="effect1_dropShadow_1_72" result="effect2_dropShadow_1_72"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_72" result="shape"/>
+=======
+<feBlend mode="normal" in2="effect1_dropShadow_1_18" result="effect2_dropShadow_1_18"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_18" result="shape"/>
+>>>>>>> 7207ea9c1b546bbd34f981f7056aa7ed72b84cde
 </filter>
 </defs>
 </svg>

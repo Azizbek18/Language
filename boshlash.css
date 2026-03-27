@@ -1,0 +1,121 @@
+* {
+    font-family: 'Inter';
+}
+
+body {
+    margin: 0;
+    background: #FAF8FF;
+    background: #00000080;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background-color: #fff;
+    width: 500px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 30px;
+    box-shadow: 0px 32px 64px -12px #4F46E526;
+}
+
+.title h1:first-child {
+    color: #D97706;
+    font-size: 90px;
+    margin: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h3 {
+    margin: 0;
+}
+
+.card p {
+    color: rgb(7, 81, 59);
+    font-weight: 700;
+}
+.card i{
+    font-size: 20px;
+}
+.card-con .card:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #6CF8BB1A;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #6CF8BB33
+}
+
+.card-con .card:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4F46E51A;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 150px;
+    border: 1px solid #4F46E533;
+}
+.card-con .card:nth-child(2) p{
+    color: #3323CC;
+}
+.card-con .card:nth-child(2) i{
+    color: #3323CC;
+    font-size: 20px;
+}
+.card-con .card:nth-child(2) p {
+    font-size: 10px;
+}
+
+.card-con .card:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FEF3C74D;
+    width: 150px;
+    padding: 20px 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid #FDE68A80;
+}
+
+.card-con .card:last-child p {
+    font-size: 10px;
+    color: #B45309;
+}
+
+.card-con .card:last-child i {
+    font-size: 20px;
+    color: #B45309;
+}
+
+.card-con {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.boshlash{
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    background: linear-gradient(90deg, #4F46E5 0%, #3525CD 100%);
+    border-radius: 15px;
+    box-shadow: 0px 32px 64px -12px #4F46E526;
+    color: #fff;
+    font-size: 20px;
+}
+.later{
+    margin: 0;
+}
