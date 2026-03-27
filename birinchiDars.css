@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    margin: 0;
+    padding: 15px 50px;
+    background-color: #FAF8FFCC;
+    display: flex;
+    padding: 20px 0px;
+
+}
+
+.ul h2 {
+    color: #4F46E5;
+    margin: 0;
+}
+
+.ul p {
+    color: #464555;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 0px;
+}
+
+ul i {
+    color: #64748B;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    width: 275px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: fixed;
+    padding: 10px 50px;
+}
+
+ul li {
+    display: flex;
+    gap: 10px;
+    color: #64748B;
+
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 10px 20px;
+}
+
+.title h2 {
+    margin: 0;
+}
+
+.title p span {
+    color: #4F46E5;
+    font-weight: 600;
+}
+
+.title p {
+    color: #464555;
+}
+
+.title h2 {
+    color: #1A1B21;
+}
+
+.head-items img {
+    width: 20px;
+}
+
+.head-img-box h4 {
+    color: #1A1B21;
+    font-weight: 500;
+    margin: 0;
+}
+
+.head-img-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #F4F3FB;
+}
+
+.head-items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.sec2 {
+    display: flex;
+}
+main{
+    position: relative;
+    left: 300px;
+}
+.sec2-main {
+    width: 60%;
+}
+
+.head-items .human {
+    width: 45px;
+    border-radius: 50px;
+}
+
+.sec2-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F4F3FB;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.foiz-con {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foiz-con-text h4 {
+    margin: 0;
+}
+
+.foiz-con-text p {
+    margin-top: 0px;
+    font-size: 12px;
+    color: #464555;
+}
+
+.sec2-translater {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 24px 0px #4F46E50A;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec2-translater h1 {
+    color: #4F46E5;
+    font-size: 45px;
+
+}
+
+.sec2-translater h2 {
+    color: #464555;
+}
+
+.sec2-translater-card {
+    background-color: #F4F3FB80;
+    width: 40%;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.sec2-translater-card h5 {
+    color: #464555;
+}
+
+.sec2-translater-card p {
+    font-weight: 600;
+}
+
+.sec2-translater-card:last-child {
+    border-left: 4px solid #006C494D
+}
+
+.sec2-translater-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sec2-AI-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AI-tahlil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec2-AI {
+    padding: 20px 30px;
+    background-color: #F4F3FB;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.AI-purple {
+    background: #3525CD1A;
+    color: #3525CD;
+    border-radius: 8px;
+}
+
+.AI-purple h6 {
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.sec2-AI-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec2-AI-main p {
+    text-align: center;
+}
+
+.sec2-AI-foot button:first-child {
+    border: 2px solid #E8E7EF;
+    padding: 15px 35px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sec2-AI-foot button:last-child {
+    background-color: #3525CD;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sec2-AI-foot {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sec2-tushutirish {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-left: 30px;
+    width: 400px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border: 1px solid #EEEDF5
+}
+
+.sec2-tushutirish-head {
+    display: flex;
+    gap: 10px;
+}
+
+.sec2-tushutirish-main p {
+    margin-bottom: 30px;
+}
+
+.sec2-tushutirish-maslahat {
+    width: 80%;
+    margin: 20px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    background: #3525CD0D;
+    color: #3525CD;
+    border: 1px solid #3525CD1A;
+}
+
+.russia {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.sec2-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qoida-qoshish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.qoida-qoshish-card{
+    display: flex;
+    width: 350px;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #F4F3FB;
+    padding: 10px 30px;
+    border-radius: 50px;
+    justify-content: space-between;
+}
+.qoida-qoshish i{
+    color: rgb(7, 80, 7);
+}
