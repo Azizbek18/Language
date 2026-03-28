@@ -195,6 +195,12 @@ header {
     font-size: 24px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .first p {
     margin: 0;
     color: #464646;
@@ -358,8 +364,9 @@ p {
 
 .boxes {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
 }
 
 .bigger .left {
@@ -400,6 +407,8 @@ p {
     gap: 30px;
     display: flex;
     flex-direction: column;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .birinchi {
@@ -519,7 +528,6 @@ p {
     flex-direction: column;
     background-color: #fff;
     width: 298px;
-    height: 578px;
     padding: 20px 25px;
     border-radius: 24px;
 }
@@ -612,4 +620,19 @@ p {
 .icon p {
     font-weight: 700;
     font-size: 12px;
+}
+
+.more {
+    width: 100%;
+    color: #3525CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more h1 {
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
