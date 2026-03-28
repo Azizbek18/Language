@@ -149,6 +149,7 @@ main {
     align-items: center;
     background-color: #F4F3FB;
     width: max-content;
+    flex-direction: row;
     padding: 20px;
     border-radius: 20px;
 }
