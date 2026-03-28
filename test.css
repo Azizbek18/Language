@@ -140,6 +140,7 @@ main {
 
 .sec2-card-title {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
