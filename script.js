@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
     let sLogin = localStorage.getItem('ism')
     if (sParol == parol.value && sLogin == login.value) {
         alert('Siz saytga kirdingiz')
-        window.location.href = 'asosiy.html'
+        window.location.href = 'page4.html'
     }
     else {
         alert('Siz saytga kira olmadingiz')
