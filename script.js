@@ -1,51 +1,28 @@
-let token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN'
-let url = 'https://clefdjiuabnztkmdwnjc.supabase.co'
+const url = 'https://clefdjiuabnztkmdwnjc.supabase.co'
+const token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN'
 
 const _supabase = supabase.createClient(url, token)
 
 const email = document.getElementById("email")
+const password = document.getElementById("password")
 
-async function Yuborish() {
-    let ism = document.getElementById('ism')
-    let parol = document.getElementById('parol')
-    let yosh = document.getElementById('yosh')
+async function login() {
+    const { data, error } = await _supabase
+        .from("signin")
+        .select("*")
+        .eq("email", email.value)
+        .eq("parol", password.value)
 
-    if (ism.value == "" && parol.value == "") {
-        alert("Maydonlarni to'ldiring")
+    if (error) {
+        alert("Xatolik yuz berdi")
+        console.log(error)
         return
     }
 
-    const { data: foydalanuvchi, error: xatolik } = await _supabase
-        .from('signin')
-        .select('*')
-        .eq('ism', ism.value)
-        .eq('email', email.value)
-        .eq('parol', parol.value)
-    if (xatolik) {
-        alert("Xatolik yuz berdi" + error.message)
-        return
+    if (data.length > 0) {
+        alert("Siz tizimga kirdingiz")
+        window.location.href = "page4.html"
+    } else {
+        alert("Email yoki parol noto‘g‘ri")
     }
-    if (foydalanuvchi.length > 0) {
-        alert("Siz ro'yhatdan o'tgan  ekansiz. Kirish qismiga o'ting")
-        window.location.href = "login.html"
-    }
-    else {
-        const { error } = await _supabase
-            .from('signin')
-            .insert([
-                {
-                    ism: ism.value,
-                    parol: parol.value,
-                    email: email.value
-                }
-            ])
-        if (error) {
-            alert("Xatolik yuz berdi" + error.message)
-        }
-        else {
-            alert("Siz ro'yhatdan o'tdingiz tabriklaymiz!!!")
-            window.location.href = 'login.html'
-        }
-    }
-
 }

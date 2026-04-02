@@ -161,6 +161,9 @@ hr {
     width: 100%;
     background-color: #FAF8FFCC;
     height: 100vh;
+    overflow: scroll;
+    scrollbar-width: none;
+    
 }
 
 header {

@@ -3,45 +3,49 @@ const token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN'
 
 const _supabase = supabase.createClient(url, token)
 
-async function yubor() {
-    const ism = document.getElementById("ism").value.trim()
-    const password = document.getElementById("password").value.trim()
-    const email = document.getElementById("email").value.trim()
-    const password_accept = document.getElementById("password-accept").value.trim()
+async function Yuborish() {
+    let ism = document.getElementById('ism')
+    let parol = document.getElementById('password')
+    let yosh = document.getElementById('yosh')
 
-    if (!ism || !email || !password || !password_accept) {
-        alert("Barcha maydonlarni to'ldiring")
+    if (ism.value == "" && parol.value == "") {
+        alert("Maydonlarni to'ldiring")
         return
     }
 
-    if (password !== password_accept) {
-        alert("Parollar mos emas")
+    const { data: foydalanuvchi, error: xatolik } = await _supabase
+        .from('signin')
+        .select('*')
+        .eq('ism', ism.value)
+        .eq('parol', parol.value)
+        .eq('email', email.value)
+    if (xatolik) {
+        alert("Xatolik yuz berdi" + error.message)
         return
     }
-
-    try {
-        const { data, error } = await _supabase
+    if (foydalanuvchi.length > 0) {
+        alert("Siz ro'yhatdan o'tgan  ekansiz. Kirish qismiga o'ting")
+        window.location.href = "index.html"
+    }
+    else {
+        const { error } = await _supabase
             .from('signin')
             .insert([
                 {
-                    ism: ism,
-                    email: email,
-                    parol: password
+                    ism: ism.value,
+                    parol: parol.value,
+                    email: email.value
                 }
             ])
-
         if (error) {
-            throw error
+            alert("Xatolik yuz berdi" + error.message)
         }
-
-        alert("Siz ro'yhatdan o'tdingiz ✅")
-        window.location.href = "index.html"
-        tozala()
-
-    } catch (err) {
-        alert("Xatolik: " + err.message)
-        console.error(err)
+        else {
+            alert("Siz ro'yhatdan o'tdingiz tabriklaymiz!!!")
+            window.location.href = 'index.html'
+        }
     }
+
 }
 
 function tozala() {
