@@ -32,7 +32,26 @@
             <h1>Ro'yxatdan o'tish</h1>
             <p>Bepul hisob yarating</p>
         </div>
-        <div class="name">
+        <form id="form">
+            <div class="name">
+                <p>TO'LIQ ISMINGIZ</p>
+                <div class="name-input">
+                    <i class="fa-regular fa-user user"></i>
+                    <input id="name" type="text" placeholder="Ismingizni kiriting">
+                </div>
+            </div>
+            <div class="email">
+                <p>EMAIL MANZIL</p>
+                <div class="email-input">
+                    <div class="email-inputs">
+                        <i class="fa-regular fa-envelope letter"></i>
+                        <input id="email" type="email" placeholder="user@example.com">
+                    </div>
+                    <i class="fa-regular fa-circle-check check"></i>
+                </div>
+            </div>
+            <div class="password">
+                <p>PAR<div class="name">
             <p>TO'LIQ ISMINGIZ</p>
             <div class="name-input">
                 <i class="fa-regular fa-user user"></i>
@@ -60,20 +79,33 @@
             <p>PAROLNI TASDIQLANG</p>
             <div class="password-accept-input">
                 <i class="fa-solid fa-shield-halved shield"></i>
-                <input type="password" placeholder="********">
+                <input id="" type="password" placeholder="********">
             </div>
-        </div>
+        </div>rd-input">
+                    <i class="fa-solid fa-lock lock"></i>
+                    <input id="parol" type="password" placeholder="********">
+                </div>
+            </div>
+            <div class="password-accept">
+                <p>PAROLNI TASDIQLANG</p>
+                <div class="password-accept-input">
+                    <i class="fa-solid fa-shield-halved shield"></i>
+                    <input id="new-parol" type="password" placeholder="********">
+                </div>
+            </div>
+        </form>
         <div class="shartlar">
             <input type="checkbox">
             <p>Men <a href="">Foydalanish shartlari</a> va <a href="">Maxfiylik siyosatiga</a> roziman</p>
         </div>
         <div class="btn-con">
-            <button class="btn">Hisob yaratish</button>
+            <button id="kirish" class="btn">Hisob yaratish</button>
         </div>
         <div class="kirish">
             <p>Hisobingiz bormi? <a href="index.html">Kiring</a></p>
         </div>
     </div>
+    <script src="signin.js"></script>
 </body>
 
 </html>
