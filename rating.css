@@ -9,6 +9,10 @@ body {
     height: 100vh;
     padding: 0;
     width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fe;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -194,6 +198,7 @@ main {
     overflow-y: scroll;
     scrollbar-width: none;
     gap: 30px;
+    padding: 20px 0px;
 }
 
 header {
@@ -353,14 +358,6 @@ h1 {
 .stage3 {
     width: 298px;
     height: 284px;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fe;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
 }
 
 .leaderboard-container {
