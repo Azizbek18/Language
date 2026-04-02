@@ -6,7 +6,7 @@ const _supabase = supabase.createClient(url, token)
 async function Yuborish() {
     let ism = document.getElementById('ism')
     let parol = document.getElementById('password')
-    let yosh = document.getElementById('yosh')
+    let email = document.getElementById('email')
 
     if (ism.value == "" && parol.value == "") {
         alert("Maydonlarni to'ldiring")

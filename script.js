@@ -22,6 +22,7 @@ async function login() {
         alert("Siz tizimga kirdiniz")
         window.location.href = "page4.html"
     }
+    
     else{
         alert("Siz ro'yhatdan o'tmagansiz")
     }
