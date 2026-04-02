@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- supabase link -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
                 <p>EMAIL MANZIL</p>
                 <div class="input1">
                     <i class="fa-regular fa-envelope"></i>
-                    <input type="text" placeholder="example@mail.com">
+                    <input id="email" type="text" placeholder="example@mail.com">
                 </div>
             </div>
             <div class="">
@@ -44,16 +46,19 @@
                 </div>
                 <div class="input1">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="text" placeholder="example@mail.com">
+                    <input id="password" type="password" placeholder="********">
                 </div>
             </div>
-            <button class="kirish-btn">Kirish</button>
+            <button onclick="" class="kirish-btn">Kirish</button>
         </div>
         <div class="foot">
             <p>Hisobingiz yo'qmi?</p>
             <p>Ro'yxatdan o'ting</p>
         </div>
     </div>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
