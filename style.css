@@ -88,6 +88,8 @@ body {
     background: linear-gradient(90deg, #4F46E5 0%, #3525CD 100%);
     padding: 20px 30px;
     border-radius: 15px;
+    margin-top: 20px;
+    width: 100%;
     border: none;
     color: #fff;
 }

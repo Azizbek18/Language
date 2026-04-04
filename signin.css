@@ -105,7 +105,9 @@ body {
     font-weight: 500;
     font-size: 12px;
 }
-
+form {
+    width: 100%;
+}
 .email-input input::placeholder {
     font-weight: 400;
     font-size: 14px;
