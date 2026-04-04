@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- supabase link -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -30,13 +32,11 @@
             <p>Hisobingizga kiring</p>
         </div>
         <div class="input-con">
-            <form id="form">
-                <div class="">
-                    <p>EMAIL MANZIL</p>
-                    <div class="input1">
-                        <i class="fa-regular fa-envelope"></i>
-                        <input id="login" type="text" placeholder="example@mail.com">
-                    </div>
+            <div class="">
+                <p>EMAIL MANZIL</p>
+                <div class="input1">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input id="email" type="text" placeholder="example@mail.com">
                 </div>
                 <div class="">
                     <div class="input2-item">
@@ -48,16 +48,20 @@
                         <input id="parol" type="password" placeholder="example@mail.com">
                     </div>
                 </div>
-                <button id="kirish" class="kirish-btn">Kirish</button>
-            </form>
+                <div class="input1">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="password" type="password" placeholder="********">
+                </div>
+            </div>
+            <button onclick="login()" class="kirish-btn">Kirish</button>
         </div>
         <div class="foot">
             <p>Hisobingiz yo'qmi?</p>
-            <a href="./signin.html">
-                <p>Ro'yxatdan o'ting</p>
-            </a>
+            <p class="sign" onclick="Sign()">Ro'yxatdan o'ting</p>
         </div>
     </div>
+
+
     <script src="script.js"></script>
 </body>
 
