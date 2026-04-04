@@ -17,12 +17,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
     <div class="signin">
         <div class="img-con">
-            <img src="/Margin.svg" alt="">
+            <img src="/Margin.svg" alt=""> 
         </div>
         <div class="title-con">
             <h1>РусЯзык</h1>
@@ -55,7 +57,7 @@
             <p>TO'LIQ ISMINGIZ</p>
             <div class="name-input">
                 <i class="fa-regular fa-user user"></i>
-                <input type="text" placeholder="Ismingizni kiriting">
+                <input id="ism" type="text" placeholder="Ismingizni kiriting">
             </div>
         </div>
         <div class="email">
@@ -63,7 +65,7 @@
             <div class="email-input">
                 <div class="email-inputs">
                     <i class="fa-regular fa-envelope letter"></i>
-                    <input type="email" placeholder="user@example.com">
+                    <input id="email" type="email" placeholder="user@example.com">
                 </div>
                 <i class="fa-regular fa-circle-check check"></i>
             </div>
@@ -72,7 +74,7 @@
             <p>PAROL YARATING</p>
             <div class="password-input">
                 <i class="fa-solid fa-lock lock"></i>
-                <input type="password" placeholder="********">
+                <input id="password" type="password" placeholder="********">
             </div>
         </div>
         <div class="password-accept">
