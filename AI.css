@@ -217,7 +217,17 @@ hr {
     top: 50px;
     height: 80vh;
 }
-
+.user-chat span i {
+    position: absolute;
+    color: #4F46E5;
+    right: 230px;
+    font-size: 25px;
+}
+.robo-chat span i {
+    position: absolute;
+    left:  230px;
+    font-size: 20px;
+}
 .xabar {
     width: 100%;
     color: #464555;
@@ -225,7 +235,7 @@ hr {
     justify-content:center;
 }
 .xabar-con{
-    width: 100%;
+    width: 90%;
 }
 .matn{
     height: 40vh;

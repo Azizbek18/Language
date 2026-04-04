@@ -13,12 +13,16 @@ let xotira = [
 
 
 yubor.addEventListener('click', (e) => {
+    if(input.value == ''){
+        return
+    }
     e.preventDefault()
     const malumot = input.value.trim();
     xabar.innerHTML += `
-      <div class=" p-4 flex justify-end">
-            <span class="bg-[#4F46E5] flex items-center gap-[20px] text-white p-2 rounded ">${malumot}<i class="fa-solid fa-user"></i></span>
-        </div>
+    <div class="user-chat p-4 flex justify-end">
+                                <span class="bg-[#4F46E5] flex gap-[20px] text-white p-2 rounded ">${malumot}<i
+                                        class="fa-solid fa-user"></i></span>
+                            </div>
     `
     xotira.push({
         role: "user", content: malumot
@@ -45,11 +49,14 @@ yubor.addEventListener('click', (e) => {
             })
 
             xabar.innerHTML += `
-            <div class=" p-4 ">
-                <span class="flex items-center gap-[20px] bg-[#3525CD0D] text-[#3525CD] w-[90%] p-2  rounded inline-block"><i class="fa-solid fa-robot"></i>${chiroyli}</span>
-            </div>
+                <div class="robo-chat p-4 ">
+                                          <span
+                                              class="flex gap-[20px] bg-[#3525CD0D] text-[#3525CD] w-[90%] p-2  rounded inline-block"><i
+                                                  class="fa-solid fa-robot"></i>${chiroyli}</span>
+                                      </div>
+            
     `
-    xabar.scrollTop = xabar.scrollHeight
+            xabar.scrollTop = xabar.scrollHeight
         })
-    .catch(error => console.error('Xatolik:', error));
+        .catch(error => console.error('Xatolik:', error));
 });
