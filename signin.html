@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ro'yxatdan o'tish - РусЯзык</title>
     <!-- css -->
     <link rel="stylesheet" href="signin.css">
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Inter font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- supabase -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
     <div class="signin">
         <div class="img-con">
-            <img src="/Margin.svg" alt="">
+            <!-- <img src="./Margin.svg" alt="Logo"> -->
         </div>
         <div class="title-con">
             <h1>РусЯзык</h1>
@@ -34,70 +27,58 @@
             <h1>Ro'yxatdan o'tish</h1>
             <p>Bepul hisob yarating</p>
         </div>
+
         <form id="form">
-            <div class="name">
-                <p>TO'LIQ ISMINGIZ</p>
-                <div class="name-input">
+            <div class="input-group">
+                <p class="label">TO'LIQ ISMINGIZ</p>
+                <div class="input-wrapper">
                     <i class="fa-regular fa-user user"></i>
-                    <input id="name" type="text" placeholder="Ismingizni kiriting">
+                    <input id="ism" type="text" placeholder="Ismingizni kiriting" required>
                 </div>
             </div>
-            <div class="email">
-                <p>EMAIL MANZIL</p>
-                <div class="email-input">
-                    <div class="email-inputs">
+
+            <div class="input-group">
+                <p class="label">EMAIL MANZIL</p>
+                <div class="input-wrapper space-between">
+                    <div class="flex-row">
                         <i class="fa-regular fa-envelope letter"></i>
-                        <input id="email" type="email" placeholder="user@example.com">
+                        <input id="email" type="email" placeholder="user@example.com" required>
                     </div>
                     <i class="fa-regular fa-circle-check check"></i>
                 </div>
             </div>
-            <div class="password">
-                <p>PAR
-                <div class="name">
-                    <p>TO'LIQ ISMINGIZ</p>
-                    <div class="name-input">
-                        <i class="fa-regular fa-user user"></i>
-                        <input id="ism" type="text" placeholder="Ismingizni kiriting" required>
-                    </div>
-                </div>
-                <div class="email">
-                    <p>EMAIL MANZIL</p>
-                    <div class="email-input">
-                        <div class="email-inputs">
-                            <i class="fa-regular fa-envelope letter"></i>
-                            <input id="email" type="email" placeholder="user@example.com" required>
-                        </div>
-                        <i class="fa-regular fa-circle-check check"></i>
-                    </div>
-                </div>
-                <div class="password">
-                    <p>PAROL YARATING</p>
-                    <div class="password-input">
-                        <i class="fa-solid fa-lock lock"></i>
-                        <input id="password" type="password" placeholder="********" required>
-                    </div>
-                </div>
-                <div class="password-accept">
-                    <p>PAROLNI TASDIQLANG</p>
-                    <div class="password-accept-input">
-                        <i class="fa-solid fa-shield-halved shield"></i>
-                        <input id="password-accept" type="password" placeholder="********" required>
-                    </div>
+
+            <div class="input-group">
+                <p class="label">PAROL YARATING</p>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock lock"></i>
+                    <input id="password" type="password" placeholder="********" required>
                 </div>
             </div>
+
+            <div class="input-group">
+                <p class="label">PAROLNI TASDIQLANG</p>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-shield-halved shield"></i>
+                    <input id="password-accept" type="password" placeholder="********" required>
+                </div>
+            </div>
+
             <div class="shartlar">
-                <input type="checkbox" required>
-                <p>Men <a href="">Foydalanish shartlari</a> va <a href="">Maxfiylik siyosatiga</a> roziman</p>
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Men <a href="#">Foydalanish shartlari</a> va <a href="#">Maxfiylik siyosatiga</a>
+                    roziman</label>
             </div>
+
             <div class="btn-con">
-                <button type="submit" onclick="Yuborish()" class="btn">Hisob yaratish</button>
+                <button type="submit" class="btn">Hisob yaratish</button>
             </div>
-            <div class="kirish">
+
+            <div class="kirish-link">
                 <p>Hisobingiz bormi? <a href="index.html">Kiring</a></p>
             </div>
+        </form>
     </div>
-
 
     <script src="signin.js"></script>
 </body>

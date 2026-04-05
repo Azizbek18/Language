@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Inter"
+    font-family: "Inter", sans-serif;
 }
 
 body {
@@ -9,245 +9,177 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
-}
-
-.img-con {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .signin {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #FFFFFF;
-    padding: 30px 40px;
-    border-radius: 20px;
-    gap: 10px;
+    padding: 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0px 4px 24px rgba(79, 70, 229, 0.08);
+    gap: 20px;
 }
 
+.img-con,
 .title-con {
     text-align: center;
 }
 
 .title-con h1 {
+    margin: 10px 0 5px;
     font-weight: 800;
     font-size: 24px;
 }
 
 .title-con p {
-    font-weight: 400;
+    margin: 0;
     font-size: 14px;
-}
-
-.text-con {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    color: #777587;
 }
 
 .text-con h1 {
     margin: 0;
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
 }
 
 .text-con p {
-    margin: 0;
-    font-weight: 400;
+    margin: 5px 0 0;
     font-size: 14px;
     color: #464555;
 }
 
-.user {
-    width: 16px;
-    height: 16px;
-    color: #464555;
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-.name p {
+.label {
     color: #464555;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 12px;
+    margin-bottom: 8px;
 }
 
-.name-input input::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.name-input {
+.input-wrapper {
     background-color: #F4F3FB;
-    padding: 15px 10px;
+    padding: 15px;
     border-radius: 12px;
-    width: 100%;
-}
-
-.letter {
-    width: 16px;
-    height: 16px;
-    color: #464555;
-}
-
-.name {
-    width: 100%;
-}
-
-.email p {
-    color: #464555;
-    font-weight: 500;
-    font-size: 12px;
-}
-form {
-    width: 100%;
-}
-.email-input input::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-}
-
-.email-input {
-    background-color: #F4F3FB;
-    padding: 15px 10px;
-    border-radius: 12px;
-    width: 100%;
     display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    color: #777587;
+    width: 20px;
+}
+
+.input-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.space-between {
     justify-content: space-between;
-    align-items: center;
 }
 
-.email {
-    width: 100%;
-}
-
-.password p {
-    color: #464555;
-    font-weight: 500;
-    font-size: 12px;
-}
-
-.password-input input::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    display: flex;
-}
-
-.password-input {
-    background-color: #F4F3FB;
-    padding: 15px 10px;
-    border-radius: 12px;
-    width: 100%;
+.flex-row {
     display: flex;
     align-items: center;
-}
-
-.password {
-    width: 100%;
-}
-
-.password-accept p {
-    color: #464555;
-    font-weight: 500;
-    font-size: 12px;
-}
-
-.password-input input::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    display: flex;
-}
-
-.password-accept-input {
-    background-color: #F4F3FB;
-    padding: 15px 10px;
-    border-radius: 12px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.password-accept {
     width: 100%;
 }
 
 .check {
-    color: green;
-    font-size: 20px;
-}
-
-input {
-    border: none;
-    background-color: #F4F3FB;
-    outline: none;
-    font-size: 15px;
-}
-
-.lock {
-    color: gray;
-}
-
-.shield {
-    color: gray;
+    color: #10B981;
+    font-size: 18px;
 }
 
 .shartlar {
     display: flex;
-    width: 100%;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
+    margin: 10px 0;
+}
+
+.shartlar p,
+.shartlar label {
+    font-size: 13px;
+    color: #464555;
+    line-height: 1.4;
+}
+
+.shartlar input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #4F46E5 0%, #3525CD 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.kirish-link {
+    text-align: center;
+    margin-top: 10px;
 }
 
 a {
     text-decoration: none;
     color: #3525CD;
-}
-
-.btn-con {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-con button {
-    width: 100%;
-    padding: 15px 0px;
-    border-radius: 10px;
-    border: none;
-    background-color: #3525CD;
-    color: white;
-    font-size: 18px;
-}
-
-.shartlar input {
-    width: 16px;
-    height: 16px;
-}
-
-.kirish {
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.kirish p {
-    font-size: 15px;
+    font-weight: 600;
 }
 
 @media (max-width: 576px) {
     .signin {
-        width: 100%;
+        padding: 30px 20px;
     }
 
     body {
-        padding: 50px 50px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .title-con h1 {
+        font-size: 20px;
+    }
+
+    .text-con h1 {
+        font-size: 18px;
+    }
+
+    .input-wrapper {
+        padding: 12px;
+    }
+
+    .shartlar label {
+        font-size: 11px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 14px;
     }
 }

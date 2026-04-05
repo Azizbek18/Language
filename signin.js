@@ -20,7 +20,7 @@ async function Yuborish() {
         .eq('parol', parol.value)
         .eq('email', email.value)
     if (xatolik) {
-        alert("Xatolik yuz berdi" + error.message)
+        alert("Xatolik yuz berdi" + xatolik.message)
         return
     }
     if (foydalanuvchi.length > 0) {
