@@ -51,7 +51,7 @@ yubor.addEventListener('click', (e) => {
             xabar.innerHTML += `
                 <div class="robo-chat p-4 ">
                                           <span
-                                              class="flex gap-[20px] bg-[#3525CD0D] text-[#3525CD] w-[90%] p-2  rounded inline-block"><i
+                                              class="overflow-scrol gap-[20px] bg-[#3525CD0D] text-[#3525CD] w-[90%] p-2  rounded inline-block"><i
                                                   class="fa-solid fa-robot"></i>${chiroyli}</span>
                                       </div>
             

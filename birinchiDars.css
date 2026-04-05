@@ -8,6 +8,7 @@ body {
     padding: 15px 50px;
     background-color: #FAF8FFCC;
     display: flex;
+    gap: 60px;
     padding: 20px 0px;
 
 }
@@ -65,7 +66,7 @@ li {
 li a {
     display: flex;
     align-items: center;
-    /* width: 100%; */
+    width: 100%;
     padding: 14px 10px;
     text-decoration: none;
     color: #64748B;
