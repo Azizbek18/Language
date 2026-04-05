@@ -93,13 +93,14 @@ body {
     border: none;
     color: #fff;
 }
-.foot p:last-child{
+
+.foot p:last-child {
     color: #3525CD;
     font-weight: 600;
     margin: 0;
 }
 
-.foot{
+.foot {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,4 +110,54 @@ body {
 
 .sign {
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+    .kirish {
+        width: 100%;
+        gap: 20px;
+    }
+
+    body {
+        padding: 0px 50px;
+    }
+
+    .bosh h2 {
+        font-size: 25px;
+    }
+
+    .bosh p {
+        font-size: 15px;
+    }
+
+    .texts h3 {
+        font-size: 15px;
+    }
+
+    .texts p {
+        font-size: 13px;
+    }
+
+    .foot {
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .foot p:first-child {
+        margin: 0;
+    }
+
+    .input-con p {
+        font-size: 12px;
+    }
+
+    .input2-item p {
+        font-size: 12px;
+    }
 }
