@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     padding: 16px;
     background-color: #F1F5F980;
     height: 100vh;
@@ -341,7 +342,10 @@ hr {
     gap: 10px;
     align-items: center;
 }
-
+main {
+    position: absolute;
+    left: 300px;
+}
 .sec2-AI-foot button:last-child {
     background-color: #3525CD;
     padding: 15px 35px;

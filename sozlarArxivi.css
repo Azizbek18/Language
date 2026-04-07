@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #FAF8FFCC;
     display: flex;
-    
+
 }
 
 .ul h2 {
@@ -147,15 +147,70 @@ i {
     align-items: center;
     position: absolute;
     height: 100vh;
-    background-color: #000000b0;
+    background-color: #d9d6d6;
 }
 
 .modal {
     width: 500px;
-    height: 500px;
+    height: 600px;
+    gap: 10px;
+    padding: 30px 50px;
     border-radius: 20px;
-    background-color: #fff;
+    box-shadow: 0px 32px 64px -12px #4F46E526;
+    background-color: #F4F3FB;
     box-shadow: 0px 4px 24px 0px #4F46E50A;
+}
+.X{
+    color: #4F46E5;
+    padding: 15px;
+    font-size: 50px;
+    transform: translate(950px,-380px) rotate(-45deg);
+}
+.modal .input-con {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.modal .input-con input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.modal .input-con select {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #4736de;
+    width: 100%;
+}
+.modal h1 {
+    color: #4736de;
+    text-align: center;
+}
+
+.input-con-div h3 {
+    margin: 10px 00px;
+    color: #4736de;
+
+}
+#cancel {
+    color: #4F46E5;
+}
+.modal .input-con button {
+    padding: 15px 30px;
+    justify-self: end;
+    font-size: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4F46E5 0%, #3525CD 100%);
+    color: #fff;
+    border: none;
+    width: max-content;
 }
 
 .up {
@@ -164,7 +219,11 @@ i {
     flex-direction: column;
     gap: 20px;
 }
-
+.modal-btn{
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
 .house {
     display: flex;
     align-items: center;

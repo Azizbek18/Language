@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Til sayti</title>
     <link rel="stylesheet" href="sozlarArxivi.css">
+    <!-- base linki -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- font-family linki -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +22,42 @@
 
 <body>
     <div class="modal-con">
-                <div class="modal">
-                    
+        <h1 class="X">+</h1>
+        <div class="modal">
+            <h1>Yangi so'zlar qo'shish</h1>
+            <div class="input-con">
+                <div class="input-con-div">
+                    <h3>Yangi so'z</h3>
+                    <input id="yangi-soz" type="text">
+                </div>
+                <div class="input-con-div">
+                    <h3>Talafuz</h3>
+                    <input id="talafuz" type="text">
+                </div>
+                <div class="input-con-div">
+                    <h3>Tarjima</h3>
+                    <input id="tarjima" type="text">
+                </div>
+                <div class="input-con-div">
+                    <h3>Turi</h3>
+                    <select>
+                        <option>Turini tanlang</option>
+                        <option>Oila</option>
+                        <option>kundalik sayohat</option>
+                        <option>oziq ovqat</option>
+                        <option>dostlar</option>
+                        <option>maktab</option>
+                        <option>dars</option>
+
+                    </select>
+                </div>
+                <div class="modal-btn">
+                    <button onclick="Yubor()" id="qoshish">Qo'shish</button>
+                    <h3 id="cancel">Cancel</h3>
                 </div>
             </div>
+        </div>
+    </div>
     <section class="left">
         <div class="up">
             <div class="logo-con">
@@ -79,14 +113,14 @@
                         <img src="./Icon (24).svg" alt="">
                         <h4>Kunlik streak: 15</h4>
                     </div>
-                    <p>24-Oktabr</p>
+                    <p id="sana"><span id="day"></span><span id="month"></span></p>
                     <i class="fa-regular fa-bell"></i>
                     <img class="human" src="./Background+Border+Shadow.svg" alt="">
                 </div>
             </div>
         </section>
         <div class="sec2">
-            
+
             <div class="sec2-head">
                 <div class="sec2-head-title">
                     <h1>O'rganilgan so'zlar</h1>
@@ -109,17 +143,19 @@
                     <button>Bu oy</button>
                 </div>
                 <select>
-                    <option value="">Saralash: Yangi</option>
+                    <option>Saralash: Yangi</option>
+                    <option>Eski</option>
+                    <option>Oldingi</option>
                 </select>
             </div>
-            <div class="sec2-card-con">
+            <div id="card-con" class="sec2-card-con">
                 <div class="sec2-card">
                     <div class="sec2-card-title">
                         <p>BUGUN</p>
-                        <i class="fa-solid fa-volume-high"></i>
+                        <i id="ovoz" onclick="Gapir()" class="fa-solid fa-volume-high"></i>
                     </div>
                     <div class="sec2-card-main">
-                        <h1>привет</h1>
+                        <h1 id="yangi-soz">привет</h1>
                         <p>[privet]</p>
                         <h2>Salom</h2>
                     </div>
@@ -135,4 +171,4 @@
     </main>
 </body>
 
-</html>
+</html>   
