@@ -2,12 +2,12 @@ const supabaseUrl = 'https://ayriinfhhziwoxlgwpem.supabase.co'
 const supabaseKey = 'sb_publishable_BDCOwMVcpeDIr7FbHp7rUA_kvtMFX8N'
 
 const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+    let yangiSoz = document.getElementById('yangi-soz')
+    let talafuz = document.getElementById('talafuz')
+    let tarjima = document.getElementById('tarjima')
 
 async function Yubor() {
-    let yangiSoz = document.getElementById('yangi-soz').value
-    let talafuz = document.getElementById('talafuz').value
-    let tarjima = document.getElementById('tarjima').value
-
+   
     const { data, error } = await _supabase
         .from('Sozlar')
         .insert([
@@ -23,8 +23,45 @@ async function Yubor() {
     else {
         alert("Bazaga qo'shildi")
         tozala()
+        modalCon.style.display = 'none'
     }
 }
+async function Olish() {
+    const { data, error } = await _supabase
+        .from('Sozlar')
+        .select('*')
+    if (error) {
+        alert('Xatolik yuz berdi!', error.message)
+    }
+    else {
+        console.log(data);
+        let html = ''
+        data.forEach(qator => {
+            let cardCon = document.getElementById('card-con')
+            html += `
+                <div class="sec2-card">
+                    <div class="sec2-card-title">
+                        <p>BUGUN</p>
+                        <i id="ovoz" onclick="Gapir()" class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <div class="sec2-card-main">
+                        <h1 id="yangi-soz">${qator.YangiSoz}</h1>
+                        <p>[${qator.Talafuz}]</p>
+                        <h2>${qator.Tarjima}</h2>
+                    </div>
+                    <hr>
+                    <div class="sec2-card-foot">
+                        <img src="./Container (4).svg" alt="">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                </div>
+            `
+            cardCon.innerHTML = html
+        });
+    }
+
+}
+Olish()
 function tozala() {
     yangiSoz.value = ''
     talafuz.value = ''
@@ -32,8 +69,8 @@ function tozala() {
 }
 
 let ochish = document.getElementById('ochish')
-let modalCon = document.querySelector('.modal-con')
 let day = document.getElementById('day')
+let modalCon = document.querySelector('.modal-con')
 let month = document.getElementById('month')
 let sana = document.getElementById('sana')
 let X = document.querySelector('.X')
@@ -98,17 +135,37 @@ let voices = [];
 speechSynthesis.onvoiceschanged = () => {
     voices = speechSynthesis.getVoices();
 };
-
+const synth = window.speechSynthesis;
 function Gapir() {
-    const text = document.getElementById('yangi-soz').textContent;
-    const utterance = new SpeechSynthesisUtterance(text);
-    let voices = speechSynthesis.getVoices();
-    let voice = voices.find(v => v.lang.toLowerCase().includes('ru')) 
-                || voices.find(v => v.lang.toLowerCase().includes('en')) 
-                || voices[0];
-    utterance.voice = voice;
-    speechSynthesis.cancel();
-    setTimeout(() => {
-        speechSynthesis.speak(utterance);
-    }, 100);
+    const yangiSozElement = document.getElementById('yangi-soz');
+    if (!yangiSozElement) {
+        console.error("Element topilmadi!");
+        return;
+    }
+
+    const matn = yangiSozElement.innerText;
+
+    synth.cancel();
+
+    const ovoz = new SpeechSynthesisUtterance(matn);
+
+    ovoz.lang = 'ru-RU';
+    ovoz.volume = 1.0;
+    ovoz.rate = 1.0;
+    ovoz.pitch = 1.0;
+
+    const voices = synth.getVoices();
+    const russianVoice = voices.find(v => v.lang.includes('ru') || v.lang.includes('RU'));
+    if (russianVoice) {
+        ovoz.voice = russianVoice;
+    }
+
+    synth.speak(ovoz);
+
+    ovoz.onstart = () => console.log("Hozir gapiryapman...");
+    ovoz.onerror = (e) => console.error("Xatolik:", e.error);
 }
+
+window.speechSynthesis.onvoiceschanged = () => {
+    console.log("Ovozlar tayyor:", synth.getVoices().length, "ta ovoz topildi.");
+};
