@@ -20,6 +20,10 @@ async function Yubor() {
     if (error) {
         alert('Xatolik yuz berdi!', error.message)
     }
+    else if(yangiSoz.value = ''){
+        alert("Bo'shliqlarni to'ldiring")
+        return
+    }
     else {
         alert("Bazaga qo'shildi")
         tozala()
