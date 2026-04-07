@@ -2,12 +2,12 @@ const supabaseUrl = 'https://ayriinfhhziwoxlgwpem.supabase.co'
 const supabaseKey = 'sb_publishable_BDCOwMVcpeDIr7FbHp7rUA_kvtMFX8N'
 
 const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
-    let yangiSoz = document.getElementById('yangi-soz')
-    let talafuz = document.getElementById('talafuz')
-    let tarjima = document.getElementById('tarjima')
+let yangiSoz = document.getElementById('yangi-soz')
+let talafuz = document.getElementById('talafuz')
+let tarjima = document.getElementById('tarjima')
 
 async function Yubor() {
-   
+
     const { data, error } = await _supabase
         .from('Sozlar')
         .insert([
@@ -20,14 +20,9 @@ async function Yubor() {
     if (error) {
         alert('Xatolik yuz berdi!', error.message)
     }
-    else if(yangiSoz.value = ''){
-        alert("Bo'shliqlarni to'ldiring")
-        return
-    }
     else {
         alert("Bazaga qo'shildi")
         tozala()
-        modalCon.style.display = 'none'
     }
 }
 async function Olish() {
