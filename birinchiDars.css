@@ -145,7 +145,12 @@ i {
 .sec2 {
     display: flex;
 }
-
+main{
+    position: relative;
+    left: 300px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
 .sec2-main {
     width: 60%;
 }

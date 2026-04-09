@@ -23,7 +23,7 @@
 
 <body>
     <div class="signin">
-        <div class="img-con">   
+        <div class="img-con">
             <img src="/Margin.svg" alt="">
         </div>
         <div class="title-con">
@@ -93,7 +93,7 @@
             <p>PAROLNI TASDIQLANG</p>
             <div class="password-accept-input"> 
                 <i class="fa-solid fa-shield-halved shield"></i>
-                <input id="" type="password" placeholder="********">
+                <input id="password-accept" type="password" placeholder="********" required>
             </div>
         </div>rd-input">
                     <i class="fa-solid fa-lock lock"></i>
@@ -109,16 +109,18 @@
             </div>
         </form>
         <div class="shartlar">
-            <input type="checkbox">
+            <input type="checkbox" required>
             <p>Men <a href="">Foydalanish shartlari</a> va <a href="">Maxfiylik siyosatiga</a> roziman</p>
         </div>
         <div class="btn-con">
-            <button id="kirish" class="btn">Hisob yaratish</button>
+            <button type="submit" onclick="Yuborish()" class="btn">Hisob yaratish</button>
         </div>
         <div class="kirish">
             <p>Hisobingiz bormi? <a href="index.html">Kiring</a></p>
         </div>
     </div>
+
+
     <script src="signin.js"></script>
 </body>
 
