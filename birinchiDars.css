@@ -33,6 +33,109 @@ body {
     flex-shrink: 0;
 }
 
+.course-card {
+    display: flex;
+    align-items: center;
+    background: #f8f9ff;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    gap: 20px;
+}
+
+.progress-circle-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6ea;
+    stroke-width: 6;
+}
+
+.circle-fill {
+    fill: none;
+    stroke: #006d44;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 219.9;
+    stroke-dashoffset: 219.9;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.percent-text {
+    position: absolute;
+    font-weight: bold;
+    color: #006d44;
+    font-size: 14px;
+}
+
+.steps-container {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.step {
+    width: 40px;
+    height: 10px;
+    background: #e6e6ea;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.step.active {
+    background: #006d44;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.progress-text {
+    color: #006d44;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.progress-bar-container {
+    width: 250px;
+    height: 14px;
+    background-color: #e6e6ea;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+}
+
 .logo-con {
     color: #4F46E5;
     padding: 15px 0px;
@@ -145,12 +248,14 @@ i {
 .sec2 {
     display: flex;
 }
-main{
+
+main {
     position: relative;
     left: 300px;
     overflow: scroll;
     scrollbar-width: none;
 }
+
 .sec2-main {
     width: 60%;
 }
@@ -166,6 +271,7 @@ main{
     flex-direction: column;
     gap: 20px;
 }
+
 .house {
     display: flex;
     align-items: center;
@@ -347,10 +453,12 @@ hr {
     gap: 10px;
     align-items: center;
 }
+
 main {
     position: absolute;
     left: 300px;
 }
+
 .sec2-AI-foot button:last-child {
     background-color: #3525CD;
     padding: 15px 35px;
