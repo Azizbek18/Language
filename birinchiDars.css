@@ -146,6 +146,40 @@ body {
     padding: 30px 40px;
 }
 
+li {
+    list-style: none;
+    width: 100%;
+}
+
+li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 10px;
+    text-decoration: none;
+    color: #64748B;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+li:hover a {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.highlited a {
+    color: #4F46E5;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+
+
 .head {
     display: flex;
     justify-content: space-between;

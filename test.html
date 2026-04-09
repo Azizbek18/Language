@@ -18,44 +18,51 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <header>
-        <div class="header">
-            <div class="ul-con">
-                <div class="ul">
-                    <h2>Polyglot Studio</h2>
-                    <p>Rus tili kursi</p>
-                </div>
-                <ul>
-                    <a href="./page4.html">
-                        <li class=""><i class="fa-solid fa-house"></i>Bosh sahifa</li>
-                    </a>
-                    <a href="./bugungiDars.html">
-                        <li class=""><i class="fa-solid fa-book-open"></i>Bugungi dars</li>
-
-                    </a>
-                    <a href="./test.html">
-                        <li class=""><i class="fa-regular fa-circle-question"></i>Test rejimi</li>
-                    </a>
-                    <a href="./sozlarArxivi.html">
-                        <li class=""><i class="fa-solid fa-box-archive"></i>So'zlar arxivi</li>
-                    </a>
-                    <a href="./AI.html">
-                        <li class=""><i class="fa-solid fa-robot"></i>AI yordamchi</li>
-                    </a>
-                    <a href="./rating.html">
-                        <li class=""><i class="fa-solid fa-ranking-star"></i>Reyting</li>
-                    </a>
-                </ul>
+<body> 
+    <section class="left">
+        <div class="up">
+            <div class="logo-con">
+                <p>Polyglot Studio</p>
             </div>
-            <div class="ul-foot">
-                <ul>
-                    <li><i class="fa-solid fa-gear"></i>Sozlamalar</li>
-                    <li><i class="fa-solid fa-arrow-right-from-bracket"></i>Chiqish</li>
-                </ul>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li class="highlited">
+                            <a href="/page4.html"><i class="fa-regular fa-house house"></i>Bosh sahifa</a>
+                        </li>
+                        <li>
+                            <a href="/bugungiDars.html"><i class="fa-solid fa-book-open"></i>Bugungi dars</a>
+                        </li>
+                        <li>
+                            <a href="test.html"><i class="fa-regular fa-circle-question"></i>Test rejimi</a>
+                        </li>
+                        <li>
+                            <a href="sozlarArxivi.html"><i class="fa-solid fa-box-archive"></i>So'zlar arxivi</a>
+                        </li>
+                        <li>
+                            <a href="AI.html"><i class="fa-solid fa-robot"></i>AI yordamchi</a>
+                        </li>
+                        <li>
+                            <a href="rating.html"><i class="fa-solid fa-ranking-star"></i></i>Reyting</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </header>
+        <div class="down">
+            <hr>
+            <div class="others">
+                <div class="setting">
+                    <i class="fa-solid fa-gear gear"></i>
+                    <a href="">Sozlamalar</a>
+                </div>
+                <div class="exit">
+                    <i class="fa-solid fa-arrow-right-from-bracket exit-icon"></i>
+                    <a href="./index.html">Chiqish</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <main>
         <section>
             <div class="head">
@@ -91,28 +98,30 @@
                     <h3 class="sec2-title-time"><i class="fa-regular fa-clock"></i> 01:24</h3>
                 </div>
                 <div class="sec2-main">
-                    <h1>СПАСИБО</h1>
-                    <p>Ushbu so'zning tarjimasini tanlang</p>
+                    <h1 id="savol-soz">СПАСИБО</h1>
+                    <p id="savol">Ushbu so'zning tarjimasini tanlang</p>
                 </div>
                 <div class="sec2-btn-con">
-                    <button><span>A</span>Salom</button>
-                    <button><span>B</span>Raxmat</button>
-                    <button><span>C</span>Xayr</button>
-                    <button><span>D</span>Iltimos</button>
+                    <button id="btn"><span id="javob1">A</span>Salom</button>
+                    <button id="btn"><span id="javob2">B</span>Raxmat</button>
+                    <button id="btn"><span id="javob3">C</span>Xayr</button>
+                    <button id="btn"><span id="javob4">D</span>Iltimos</button>
                 </div>
                 <div class="sec2-javob">
                     <div class="sec2-javob-text-con">
                         <img src="./Background (1).svg" alt="">
                         <div class="sec2-javob-text">
-                            <h3>To'g'ri</h3>
-                            <p>Rahmat = спасибо</p>
+                            <h3 id="natija">To'g'ri</h3>
+                            <p id="togri-javob">Rahmat = спасибо</p>
                         </div>
                     </div>
-                    <button>Keyingi savol <i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="keyingi">Keyingi savol <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>
     </main>
+    <script src="test.js"></script>
 </body>
+
 
 </html>
