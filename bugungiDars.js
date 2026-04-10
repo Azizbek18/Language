@@ -15,7 +15,7 @@ function updateProgress(e) {
     fill.style.width = percent + "%";
     text.innerText = percent + "% aniqlik";
 
-    fill.style.background = `linear-gradient(to right, #006d44 0%, #006d44 70%, #20c997 100%)`;
+    fill.style.background = `linear-gradient(to right, #006d44 0%, #006d44 70%)`;
 }
 
 container.addEventListener('mousedown', (e) => {
