@@ -52,15 +52,6 @@ body {
 
 .nav-item.logout:hover {
     background: #FEF2F2;
-    color: #EF4444;
-}
-
-.nav-item.logout {
-    color: #EF4444;
-}
-
-.nav-item.logout:hover {
-    background: #FEF2F2;
     color: #DC2626;
 }
 
@@ -123,8 +114,15 @@ body {
 
 /* --- 2. СТРУКТУРА (LAYOUT) --- */
 .app-container {
-    display: flex;
-    height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .sidebar {
@@ -140,45 +138,11 @@ body {
 
 .content {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
     display: block;
     flex-direction: column;
     padding: 30px 40px;
 }
-
-li {
-    list-style: none;
-    width: 100%;
-}
-
-li a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 14px 10px;
-    text-decoration: none;
-    color: #64748B;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-li:hover a {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-i {
-    margin-right: 10px;
-}
-
-.highlited a {
-    color: #4F46E5;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-}
-
-
 
 .head {
     display: flex;
@@ -254,6 +218,11 @@ i {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.content {
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .progress-card {
@@ -701,9 +670,17 @@ i {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .sidebar {
+        
+    }
 }
 
 @media (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+    
     .sidebar {
         display: none;
     }
@@ -737,21 +714,159 @@ i {
     .example-grid {
         grid-template-columns: 1fr;
     }
+
+    .content {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 15px 100px;
+    }
+
+    .word-card,
+    .ai-check-card,
+    .progress-card,
+    .example-box {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-word {
+        word-wrap: break-word;
+        word-break: break-word;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 520px) {
+    .head {
+        /* Текст уходит наверх, иконки вниз */
+        align-items: flex-start;
+        /* Выравнивание по левому краю */
+        gap: 16px;
+        margin-bottom: 25px;
+        width: 100%;
+        display: flex;
+    }
+
+    .head-items {
+        width: 50%;
+        /* Блок с иконками растягивается на всю ширину */
+        justify-content: flex-start;
+        /* Иконки идут друг за другом слева */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Делаем стрик чуть компактнее, чтобы он не доминировал */
+    .streak-badge {
+        padding: 6px 12px;
+        font-size: 11px;
+        white-space: nowrap;
+        /* Чтобы текст не переносился внутри кнопки */
+        height: 36px;
+        /* Выравниваем высоту с аватаром */
+    }
+
+    .head h2 {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    /* Уменьшаем иконки и аватар, чтобы они не вылезали за края на 320px */
+    .icon-btn,
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        /* Чтобы аватар не сплющило */
+    }
+
+    .title {
+        width: 50%;
+    }
 }
 
 @media (max-width: 480px) {
+
+    .content {
+        padding: 20px 12px 90px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .head {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .title {
+        width: 50%;
+        text-align: center;
+    }
+
+    .head h2 {
+        font-size: 20px;
+    }
+
+    .head-items {
+        width: 50%;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+
+    .word-card {
+        padding: 30px 15px !important;
+        border-radius: 24px;
+    }
+
+    .main-word {
+        font-size: 32px !important;
+        line-height: 1.2;
+    }
+
+    .translation {
+        font-size: 22px !important;
+    }
+
+    .progress-card {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .progress-left {
+        flex-direction: column;
+    }
+
     .bottom-nav {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
+        width: 100%;
     }
 
     .btn-primary,
     .btn-secondary {
         width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 14px;
     }
 
-    .head h2 {
-        font-size: 20px;
+    .skip-link {
+        order: 3;
+        margin-top: 5px;
+    }
+
+    .ai-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .accuracy-bar {
+        width: 100%;
     }
 }
 
@@ -763,78 +878,94 @@ i {
         width: 100%;
     }
 
+    .nav-item.logout {
+        margin-top: 0px;
+    }
+
+    .title {
+        width: 100%;
+
+    }
+
+    .mobile-nav {
+        display: flex !important;
+        height: 60px;
+        padding: 0 5px;
+        gap: 10px;
+        align-items: center;
+        overflow-y: scroll;
+    }
+
+    .mobile-nav .nav-item {
+        gap: 0;
+    }
+
     .app-container {
         width: 100%;
-        overflow-x: hidden;
+        display: block;
     }
 
     .content {
-        padding: 15px 10px 100px !important;
+        padding: 10px 8px 80px !important;
         width: 100%;
         box-sizing: border-box;
-        gap: 20px;
-        display: flex;
+    }
+
+    .head {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head-items {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: nowrap;
     }
 
     .word-card {
-        padding: 25px 10px !important;
-        margin-left: 0;
-        margin-right: 0;
+        padding: 20px 10px !important;
         width: 100% !important;
-        box-sizing: border-box;
     }
 
     .main-word {
-        font-size: 24px !important;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        font-size: 26px !important;
+        word-break: break-all;
     }
 
     .translation {
         font-size: 18px !important;
-        line-height: 1.3;
     }
 
-    .progress-card,
-    .ai-check-card,
-    .example-box {
-        width: 100% !important;
-        padding: 15px 10px !important;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+    .streak-badge {
+        font-size: 9px;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+
+    .streak-badge span {
+        display: inline-block;
     }
 
     .head-items .icon-btn:not(.user-avatar) {
         display: none;
     }
 
-    .streak-badge {
-        font-size: 9px;
-        padding: 4px 8px;
-    }
-
-    .bottom-nav {
-        width: 100%;
-        padding: 0;
-    }
-
-    .dashboard-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
+    .dashboard-grid,
     .main-column,
     .info-column {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        display: block;
+        gap: 15px;
     }
 
-    .ai-header {
-        flex-direction: column;
+    .progress-card,
+    .ai-check-card {
+        padding: 15px 10px !important;
     }
 }

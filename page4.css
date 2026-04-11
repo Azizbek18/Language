@@ -110,6 +110,7 @@ body {
 .nav-item:hover::after {
     opacity: 1;
 }
+
 /* остальное */
 .main-content {
     flex: 1;
@@ -647,22 +648,272 @@ body {
 }
 
 @media (max-width: 350px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
+
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
 
-    .header h1 {
-        font-size: 18px;
+    .app-container {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .header-left p {
+    .content {
+        padding: 10px 10px 80px !important;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .head {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .title h2 {
+        font-size: 16px !important;
+        margin: 0;
+    }
+
+    .breadcrumb {
         display: none;
     }
 
+    .head-items {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
     .streak-badge {
-        background: none;
-        border: none;
+        padding: 4px 6px !important;
+        font-size: 10px !important;
+        background: #fff0f0;
+        border-radius: 8px;
+    }
+
+    .streak-badge span {
+        display: none;
+    }
+
+    .streak-badge::after {
+        content: "15";
+        font-weight: 700;
+    }
+
+    .user-avatar {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50%;
+    }
+
+    .icon-btn {
+        display: none;
+    }
+
+    .word-card {
+        padding: 20px 15px !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .main-word {
+        font-size: 22px !important;
+        letter-spacing: -0.5px;
+    }
+
+    .translation {
+        font-size: 17px !important;
+    }
+
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-column,
+    .info-column {
+        width: 100% !important;
+    }
+
+    .example-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .progress-card,
+    .ai-check-card,
+    .example-box,
+    .ai-explanation-card {
+        width: 100% !important;
+        padding: 12px !important;
+        border-radius: 15px !important;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .progress-left {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .circle-box {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 12px !important;
+    }
+
+    .ai-header {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 14px !important;
+        justify-content: center;
+    }
+
+    .skip-link {
+        font-size: 12px;
+        text-align: center;
+        order: 3;
+    }
+
+    .mobile-nav {
+        height: 65px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 0 10px;
+    }
+
+    .mobile-nav .nav-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s cubic-b ezier(0.175, 0.885, 0.32, 1.275);
         padding: 0;
-        color: #F97316;
+        background: transparent !important;
+        width: 50px;
+    }
+
+    .mobile-nav .nav-item i {
+        margin: 0;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-nav .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        width: 4px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 50%;
+        opacity: 0;
+        transform: translateY(10px) scale(0);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav .nav-item.active i,
+    .mobile-nav .nav-item:hover i {
+        transform: translateY(-8px);
+        color: var(--primary);
+    }
+
+    .mobile-nav .nav-item.active::after,
+    .mobile-nav .nav-item:hover::after {
+        opacity: 1;
+        transform: translateY(0) scale(1.5);
+    }
+
+    .nav-item::after {
+        display: none;
+    }
+
+    .mobile-nav .nav-item::after {
+        display: block;
+    }
+
+    .mobile-nav {
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #ffffff;
+        border-top: 1px solid var(--border);
+    }
+
+    .mobile-nav .nav-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent !important;
+        padding: 0;
+        width: 60px;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-nav .nav-item i {
+        margin: 0;
+        font-size: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav .nav-item::after {
+        content: "";
+        position: absolute;
+
+        left: 50% !important;
+        top: auto !important;
+        height: 4px !important;
+        width: 12px !important;
+
+        bottom: 12px;
+        transform: translateX(-50%) translateY(10px);
+        background: var(--primary);
+        border-radius: 10px;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-nav .nav-item.active i,
+    .mobile-nav .nav-item:hover i {
+        transform: translateY(-10px);
+        color: var(--primary);
+    }
+
+    .mobile-nav .nav-item.active::after,
+    .mobile-nav .nav-item:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
