@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- base linki -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </head>
 
-<body> 
+<body>
     <section class="left">
         <div class="up">
             <div class="logo-con">
@@ -81,7 +84,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section>`
         <section class="sec2">
             <nav class="nav">
                 <ul class="list">
@@ -94,7 +97,7 @@
                 <div class="sec2-card-title">
                     <div class="sec2-cad-text">
                         <h3>SAVOL</h3>
-                        <h3>5 / 10</h3>
+                        <h3 id="savolNomer">5 / 10</h3>
                     </div>
                     <img src="./Progress Dots.svg" alt="">
                     <h3 class="sec2-title-time"><i class="fa-regular fa-clock"></i> 01:24</h3>
@@ -104,20 +107,20 @@
                     <p id="savol">Ushbu so'zning tarjimasini tanlang</p>
                 </div>
                 <div class="sec2-btn-con">
-                    <button id="btn"><span id="javob1">A</span>Salom</button>
-                    <button id="btn"><span id="javob2">B</span>Raxmat</button>
-                    <button id="btn"><span id="javob3">C</span>Xayr</button>
-                    <button id="btn"><span id="javob4">D</span>Iltimos</button>
+                    <button id="btnA"><span>A</span><span id="javob1">Salom</span></button>
+                    <button id="btnB"><span>B</span><span id="javob2">Raxmat</span></button>
+                    <button id="btnC"><span>C</span><span id="javob3">Xayr</span></button>
+                    <button id="btnD"><span>D</span><span id="javob4">Iltimos</span></button>
                 </div>
                 <div class="sec2-javob">
                     <div class="sec2-javob-text-con">
                         <img src="./Background (1).svg" alt="">
                         <div class="sec2-javob-text">
                             <h3 id="natija">To'g'ri</h3>
-                            <p id="togri-javob">Rahmat = спасибо</p>
+                            <p id="togriJavob">Rahmat = спасибо</p>
                         </div>
                     </div>
-                    <button id="keyingi">Keyingi savol <i class="fa-solid fa-arrow-right"></i></button>
+                    <button onclick="Keyingi()">Keyingi savol<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>

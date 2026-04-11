@@ -401,3 +401,11 @@ main{
     background-color: #006C49;
     color: #fff;
 }
+
+.yashil{
+    border: 2px solid green !important;
+}
+
+.qizil{
+    border: 2px solid red !important;
+}
