@@ -3,7 +3,6 @@ const supabaseKey = 'sb_publishable_BDCOwMVcpeDIr7FbHp7rUA_kvtMFX8N';
 
 const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-// 1. GLOBAL O'ZGARUVCHILAR (Hammasi bir joyda, "let" faqat bir marta ishlatilgan)
 let savollar = [];
 let natijalar = [];
 let hozirgiIndex = 0;
@@ -159,11 +158,11 @@ function NatijaniKorsatish() {
     const savolSoz = document.getElementById('savol-soz');
     const variantlarQutisi = document.querySelector('.sec2-btn-con');
     const pastkiPanel = document.getElementById('sec2-javob');
-    const tepadagiMaLumotlar = document.querySelector('.sec2-top-info'); 
+    const tepadagiMaLumotlar = document.querySelector('.sec2-top-info');
 
-    if (tepadagiMaLumotlar) tepadagiMaLumotlar.style.display = 'none'; 
-    variantlarQutisi.style.display = 'none'; 
-    pastkiPanel.style.display = 'none'; 
+    if (tepadagiMaLumotlar) tepadagiMaLumotlar.style.display = 'none';
+    variantlarQutisi.style.display = 'none';
+    pastkiPanel.style.display = 'none';
 
     savolSoz.innerHTML = `
         <div class="natija-konteyner">
