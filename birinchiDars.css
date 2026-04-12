@@ -671,9 +671,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .sidebar {
-        
-    }
 }
 
 @media (max-width: 768px) {
