@@ -76,21 +76,35 @@
                         <h4>Kunlik streak: 15</h4>
                     </div>
                     <i class="fa-regular fa-bell"></i>
-                    <img class="human" src="./Background+Border+Shadow.svg" alt="">
+                    <a href="">
+                        <img class="human" src="./Background+Border+Shadow.svg" alt="">
+                    </a>
                 </div>
             </div>
         </section>
         <section class="sec2">
             <div class="sec2-main">
-                <div class="sec2-card">
-                    <div class="foiz-con">
-                        <img src="./Container (1).svg" alt="">
-                        <div class="foiz-con-text">
-                            <h4>Dars jarayoni</h4>
-                            <p>12 / 20 so'z o'zlashtirildi</p>
-                        </div>
+                <div class="course-card">
+                    <div class="progress-circle-container">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="35"></circle>
+                            <circle id="circle-progress" class="circle-fill" cx="40" cy="40" r="35"></circle>
+                        </svg>
+                        <div id="percent-val" class="percent-text">0%</div>
                     </div>
-                    <img src="./Container (2).svg" alt="">
+
+                    <div class="info">
+                        <h3>Dars jarayoni</h3>
+                        <p id="stats-text">0 / 20 so'z o'zlashtirildi</p>
+                    </div>
+
+                    <div class="steps-container" id="steps-box">
+                        <div class="step" data-index="1"></div>
+                        <div class="step" data-index="2"></div>
+                        <div class="step" data-index="3"></div>
+                        <div class="step" data-index="4"></div>
+                        <div class="step" data-index="5"></div>
+                    </div>
                 </div>
                 <div class="sec2-translater">
                     <h2>YANGI SO'Z</h2>
@@ -117,7 +131,12 @@
                             </div>
                             <p>Talaffuzni tekshirish</p>
                         </div>
-                        <img src="./Container (3).svg" alt="">
+                        <div class="progress-wrapper">
+                            <span id="percent-text" class="progress-text">0% aniqlik</span>
+                            <div class="progress-bar-container js-progress-container" style="cursor: pointer;">
+                                <div id="progress-fill" class="progress-fill"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sec2-AI-main">
                         <img src="./Button.svg" alt="">
@@ -166,6 +185,7 @@
             </div>
         </section>
     </main>
+    <script src="bugungiDars.js"></script>
 </body>
 
 </html>
