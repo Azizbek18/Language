@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Til sayti</title>
+    <link rel="stylesheet" href="test2.css">
+    <!-- font-family linki -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font-awesome linki -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- base linki -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+    <section class="left">
+        <div class="up">
+            <div class="logo-con">
+                <p>Polyglot Studio</p>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li class="highlited">
+                            <a href="/page4.html"><i class="fa-regular fa-house house"></i>Bosh sahifa</a>
+                        </li>
+                        <li>
+                            <a href="/bugungiDars.html"><i class="fa-solid fa-book-open"></i>Bugungi dars</a>
+                        </li>
+                        <li>
+                            <a href="test.html"><i class="fa-regular fa-circle-question"></i>Test rejimi</a>
+                        </li>
+                        <li>
+                            <a href="sozlarArxivi.html"><i class="fa-solid fa-box-archive"></i>So'zlar arxivi</a>
+                        </li>
+                        <li>
+                            <a href="AI.html"><i class="fa-solid fa-robot"></i>AI yordamchi</a>
+                        </li>
+                        <li>
+                            <a href="rating.html"><i class="fa-solid fa-ranking-star"></i></i>Reyting</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="down">
+            <hr>
+            <div class="others">
+                <div class="setting">
+                    <i class="fa-solid fa-gear gear"></i>
+                    <a href="">Sozlamalar</a>
+                </div>
+                <div class="exit">
+                    <i class="fa-solid fa-arrow-right-from-bracket exit-icon"></i>
+                    <a href="./index.html">Chiqish</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section>
+            <div class="head">
+                <div class="title">
+                    <h2>Assalomu alaykum!</h2>
+                    <p>Bosh sahifa > <span>Bugungi dars</span></p>
+                </div>
+                <div class="head-items">
+                    <div class="head-img-box">
+                        <img src="./Container.svg" alt="">
+                        <h4>Kunlik streak: 15</h4>
+                    </div>
+                    <i class="fa-regular fa-bell"></i>
+                    <a href="">
+                        <img class="human" src="./Background+Border+Shadow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>`
+        <section class="sec2">
+            <nav class="nav">
+                <ul class="list">
+                    <a href="./test.html">
+                        <li>Tarjima testi</li>
+                    </a>
+                    <a href="#">
+                        <li>So'zni to'ldirish</li>
+                    </a>
+                    <a href="./test3.html">
+                        <li>Talaffuz testi</li>
+                    </a>
+                </ul>
+            </nav>
+            <div class="sec2-card">
+                <div class="sec2-card-title">
+                    <div class="sec2-cad-text">
+                        <h3>SAVOL</h3>
+                        <h3 id="savolNomer">1 / 20</h3>
+                    </div>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="dot-con">
+                            <div class="dot-box">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="dot-box">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer-badge">
+                        <i class="fa-solid fa-clock"></i> 00:20
+                    </div>
+                </div>
+                <div class="sec2-main">
+                    <h1 id="savol-soz">СПАСИБО</h1>
+                    <p id="savol">Ushbu so'zning tarjimasini tanlang</p>
+                </div>
+                <div class="sec2-btn-con">
+                    <button id="btnA"><span>A</span><span id="javob1">Salom</span></button>
+                    <button id="btnB"><span>B</span><span id="javob2">Raxmat</span></button>
+                    <button id="btnC"><span>C</span><span id="javob3">Xayr</span></button>
+                    <button id="btnD"><span>D</span><span id="javob4">Iltimos</span></button>
+                </div>
+                <div id="sec2-javob" class="sec2-javob">
+                    <div class="sec2-javob-text-con">
+                        <div class="sec2-javob-text ">
+                            <h3 id="natija"></h3>
+                            <p id="togriJavob"></p>
+                        </div>
+                    </div>
+                    <button onclick="Keyingi()">Keyingi savol<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="test2.js"></script>
+</body>
+
+
+</html>

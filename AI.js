@@ -7,21 +7,21 @@ let token = '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'
 let xotira = [
     {
         role: 'system',
-        content: "Sen istalgan savollarga javob bera oladigan kuchli Zebo san .Bundan tashqari sen do'stona munosabatlarga ham juda iliqlik bilan yondashasan. Hamma savollarga to'g'ri va aniq eng muhim o'zbekcha javob ber"
+        content: "Sen istalgan savollarga javob bera oladigan kuchli AI san .Bundan tashqari sen do'stona munosabatlarga ham juda iliqlik bilan yondashasan. Hamma savollarga to'g'ri va aniq eng muhim o'zbekcha javob ber"
     }
 ]
 
 
 yubor.addEventListener('click', (e) => {
-    if(input.value == ''){
+    if (input.value == '') {
         return
     }
     e.preventDefault()
     const malumot = input.value.trim();
     xabar.innerHTML += `
     <div class="user-chat p-4 flex justify-end">
-                                <span class="bg-[#4F46E5] flex gap-[20px] text-white p-2 rounded ">${malumot}<i
-                                        class="fa-solid fa-user"></i></span>
+                                <span class="bg-[#4F46E5] flex gap-[20px] text-white p-2 rounded ">${malumot}</span>
+                                <i class="fa-solid fa-user"></i>
                             </div>
     `
     xotira.push({
@@ -50,10 +50,9 @@ yubor.addEventListener('click', (e) => {
 
             xabar.innerHTML += `
                 <div class="robo-chat p-4 ">
-                                          <span
-                                              class="overflow-scrol gap-[20px] bg-[#3525CD0D] text-[#3525CD] w-[90%] p-2  rounded inline-block"><i
-                                                  class="fa-solid fa-robot"></i>${chiroyli}</span>
-                                      </div>
+                                <span class="overflow-scrol gap-[20px] bg-[#3525CD0D] text-[#3525CD] p-2  rounded inline-block">${chiroyli}</span>
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
             
     `
             xabar.scrollTop = xabar.scrollHeight
