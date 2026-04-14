@@ -641,9 +641,6 @@ main {
         gap: 20px;
     }
 
-    .mob-item {
-    }
-
     .head-items {
         display: flex;
         align-items: center;
