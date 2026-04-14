@@ -518,4 +518,8 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    .mobile-nav {
+        padding: 0px 10px;
+    }
 }

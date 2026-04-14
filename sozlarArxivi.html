@@ -58,50 +58,32 @@
             </div>
         </div>
     </div>
-    <section class="left">
-        <div class="up">
-            <div class="logo-con">
-                <p>Polyglot Studio</p>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo-box">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Polyglot Studio</span>
             </div>
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li class="highlited">
-                            <a href="/page4.html"><i class="fa-regular fa-house house"></i>Bosh sahifa</a>
-                        </li>
-                        <li>
-                            <a href="/bugungiDars.html"><i class="fa-solid fa-book-open"></i>Bugungi dars</a>
-                        </li>
-                        <li>
-                            <a href="test.html"><i class="fa-regular fa-circle-question"></i>Test rejimi</a>
-                        </li>
-                        <li>
-                            <a href="sozlarArxivi.html"><i class="fa-solid fa-box-archive"></i>So'zlar arxivi</a>
-                        </li>
-                        <li>
-                            <a href="AI.html"><i class="fa-solid fa-robot"></i>AI yordamchi</a>
-                        </li>
-                        <li>
-                            <a href="rating.html"><i class="fa-solid fa-ranking-star"></i></i>Reyting</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="main-nav">
+                <a href="page4.html" class="nav-item active"><i class="fa-solid fa-house"></i> <span>Bosh
+                        sahifa</span></a>
+                <a href="bugungiDars.html" class="nav-item"><i class="fa-solid fa-book-open"></i> <span>Bugungi
+                        dars</span></a>
+                <a href="test.html" class="nav-item"><i class="fa-solid fa-vial"></i> <span>Test rejimi</span></a>
+                <a href="sozlarArxivi.html" class="nav-item"><i class="fa-solid fa-box-archive"></i> <span>So'zlar
+                        arxivi</span></a>
+                <a href="AI.html" class="nav-item"><i class="fa-solid fa-robot"></i> <span>AI yordamchi</span></a>
+                <a href="rating.html" class="nav-item"><i class="fa-solid fa-ranking-star"></i>
+                    <span>Reyting</span></a>
+            </nav>
         </div>
-        <div class="down">
-            <hr>
-            <div class="others">
-                <div class="setting">
-                    <i class="fa-solid fa-gear gear"></i>
-                    <a href="">Sozlamalar</a>
-                </div>
-                <div class="exit">
-                    <i class="fa-solid fa-arrow-right-from-bracket exit-icon"></i>
-                    <a href="./index.html">Chiqish</a>
-                </div>
-            </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> <span>Sozlamalar</span></a>
+            <a href="#" class="nav-item logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Chiqish</span></a>
         </div>
-    </section>
+    </aside>
     <main>
         <section>
             <div class="head">
@@ -149,11 +131,21 @@
                 </select>
             </div>
             <div id="card-con" class="sec2-card-con">
-                
+
             </div>
         </div>
-        <script src="sozlarArxivi.js"></script>
     </main>
+
+    <nav class="mobile-nav">
+        <a href="#" class="mob-item active" title="Bosh sahifa"><i class="fa-solid fa-house"></i></a>
+        <a href="#" class="mob-item" title="Darslar"><i class="fa-solid fa-book-open"></i></a>
+        <a href="#" class="mob-item" title="Testlar"><i class="fa-solid fa-flask"></i></a>
+        <a href="#" class="mob-item" title="Arxiv"><i class="fa-solid fa-box-archive"></i></a>
+        <a href="#" class="mob-item" title="Reyting"><i class="fa-solid fa-ranking-star"></i></a>
+        <a href="#" class="mob-item" title="Sozlamalar"><i class="fa-solid fa-gear"></i></a>
+        <a href="#" class="mob-item logout" title="Chiqish"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </nav>
+    <script src="sozlarArxivi.js"></script>
 </body>
 
-</html>   
+</html>
