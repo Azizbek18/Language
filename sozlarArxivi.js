@@ -12,9 +12,9 @@ async function Yubor() {
         .from('Sozlar')
         .insert([
             {
-                YangiSoz: yangiSoz,
-                Talafuz: talafuz,
-                Tarjima: tarjima
+                YangiSoz: yangiSoz.value,
+                Talafuz: talafuz.value,
+                Tarjima: tarjima.value
             }
         ])
     if (error) {
@@ -23,7 +23,7 @@ async function Yubor() {
     else {
         alert("Bazaga qo'shildi")
         tozala()
-    }
+    }   
 }
 async function Olish() {
     const { data, error } = await _supabase
@@ -31,7 +31,7 @@ async function Olish() {
         .select('*')
     if (error) {
         alert('Xatolik yuz berdi!', error.message)
-    }
+    } 
     else {
         console.log(data);
         let html = ''
