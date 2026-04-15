@@ -633,23 +633,15 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .sidebar {
-        width: 80px;
-        min-width: 80px;
-        padding: 30px 10px;
-    }
-
-    .sidebar span,
-    .logo-box span {
-        display: none;
-    }
-
     .nav-item {
-        justify-content: center;
     }
 
     .dashboard-grid {
         grid-template-columns: 1fr;
+    }
+
+    .sidebar-top {
+        align-content: flex-start;
     }
 
 }
