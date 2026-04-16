@@ -220,16 +220,19 @@
 
     .user-chat span i {
         font-size: 25px;
+        color: #3525CD;
     }
 
     .robo-chat span i {
         font-size: 20px;
+        color: #3525CD;
     }
 
     .robo-chat {
         display: flex;
         align-items: center;
         gap: 20px;
+        justify-content: start;
         flex-direction: row-reverse;
         padding: 0;
     }
@@ -246,9 +249,14 @@
         width: 100%;
         color: #464555;
         display: flex;
+        gap: 30px;
         justify-content: center;
     }
-
+    .matn{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
     .xabar-con {
         width: 90%;
     }
