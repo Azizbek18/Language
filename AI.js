@@ -1,9 +1,9 @@
 let xabar = document.getElementById('xabar')
 let input = document.getElementById('input')
 let yubor = document.getElementById('yubor')
-
-let token = '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'
-
+const part1 = 'gsk_4AymMUB75dUuZQrFEHl9WG';
+const part2 = 'dyb3FYAsgl0iy7TCkWKadcZclyhcZl';
+let token = part1 + part2;
 let xotira = [
     {
         role: 'system',

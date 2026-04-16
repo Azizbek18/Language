@@ -17,12 +17,14 @@ let savolQuti = document.querySelector('.sec2-btn-con');
 
 async function Olish() {
     const { data, error } = await _supabase
-        .from('Test')
+        .from('Test2')
         .select('*');
 
     if (error) {
         alert('Xatolik yuz berdi: ' + error.message);
     } else {
+        console.log(data);
+        
         savollar = data;
         EkrangaChiqarish();
     }

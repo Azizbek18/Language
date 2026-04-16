@@ -502,6 +502,8 @@ h1 {
     font-weight: bold;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
 
 @media (max-width: 1200px) {
     main {
@@ -605,3 +607,4 @@ h1 {
         width: 100%;
     }
 }
+>>>>>>> c0a321a73eb26098ac61e98f0e9c5980134ace8e
