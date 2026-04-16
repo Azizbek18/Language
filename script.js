@@ -20,7 +20,7 @@ async function login() {
 
     if (foydalanuvchi.length > 0) {
         alert("Siz tizimga kirdiniz")
-        window.location.href = "page4.html"
+        window.location.href = "boshlash.html"
     }
     
     else{
