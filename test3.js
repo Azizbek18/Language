@@ -17,7 +17,7 @@ let savolQuti = document.querySelector('.sec2-btn-con');
 
 async function Olish() {
     const { data, error } = await _supabase
-        .from('Test')
+        .from('Test3')
         .select('*');
 
     if (error) {
