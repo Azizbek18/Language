@@ -48,6 +48,7 @@ async function Yuborish() {
 
 }
 
+
 function tozala() {
     document.getElementById("ism").value = ''
     document.getElementById("password").value = ''
