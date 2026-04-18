@@ -2,6 +2,7 @@
     --primary: #4338CA;
     --text-main: #1E293B;
     --text-muted: #64748B;
+    --primary-light: #cdd8fc;
 }
 
 * {
@@ -42,17 +43,12 @@ body {
 }
 
 .nav-item.logout:hover {
-    background: #FEF2F2;
+    background: #eaafafb4;
     color: #EF4444;
 }
 
 .nav-item.logout {
     color: #EF4444;
-}
-
-.nav-item.logout:hover {
-    background: #FEF2F2;
-    color: #DC2626;
 }
 
 .nav-item.logout::after {
@@ -84,13 +80,13 @@ body {
 }
 
 .nav-item:hover {
-    background: #F1F5F9;
+    background: var(--primary-light);
     color: var(--primary);
     padding-left: 20px;
 }
 
 .nav-item.active {
-    background: #EEF2FF;
+    background: var(--primary-light);
     color: var(--primary);
 }
 
@@ -121,7 +117,7 @@ body {
 }
 
 .header {
-    height: 90px;
+    min-height: 90px;
     background: #fff;
     padding: 0 40px;
     display: flex;
@@ -559,7 +555,7 @@ body {
 
 @media (max-width: 992px) {
     .sidebar {
-        width: 80px;
+        min-width: 80px;
         padding: 20px 10px;
     }
 
@@ -570,6 +566,7 @@ body {
 
     .nav-item {
         justify-content: center;
+        width: 60px;
     }
 
     .header {
@@ -594,17 +591,24 @@ body {
     .mobile-nav {
         display: flex;
         position: fixed;
+        padding: 0px 10px;
         bottom: 0;
         width: 100%;
         height: 65px;
         background: #ffffff;
         border-top: 1px solid #eee;
-        justify-content: space-around;
         align-items: center;
+        overflow-x: auto;
+        gap: 10px;
     }
 
     .date-box {
         display: none;
+    }
+
+    .nav-item {
+        margin: 0px 5px;
+        padding: 15px 18px;
     }
 
     .lesson-panel {
@@ -617,7 +621,7 @@ body {
     }
 
     .header {
-        height: 70px;
+        min-height: 100px;
         padding: 0 15px;
     }
 
@@ -648,12 +652,16 @@ body {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
 
     html,
     body {
         overflow-x: hidden;
         width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(1,1fr);
     }
 
     .app-container {
@@ -669,13 +677,14 @@ body {
         gap: 15px;
     }
 
-    .head {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    .header {
+        flex-direction: column;
+        min-height: 100px !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0px;
     }
 
     .title h2 {
@@ -696,7 +705,7 @@ body {
     .streak-badge {
         padding: 4px 6px !important;
         font-size: 10px !important;
-        background: #fff0f0;
+        background: #fff0f0; 
         border-radius: 8px;
     }
 
@@ -777,16 +786,23 @@ body {
         font-size: 12px !important;
     }
 
-    .ai-header {
-        flex-direction: column;
-        gap: 5px;
-        text-align: center;
-    }
-
     .bottom-nav {
         flex-direction: column;
         gap: 10px;
         width: 100%;
+    }
+
+    .lesson-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .lesson-tags {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
     }
 
     .btn-primary,
@@ -810,111 +826,4 @@ body {
         padding: 0 10px;
     }
 
-    .mobile-nav .nav-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s cubic-b ezier(0.175, 0.885, 0.32, 1.275);
-        padding: 0;
-        background: transparent !important;
-        width: 50px;
-    }
-
-    .mobile-nav .nav-item i {
-        margin: 0;
-        font-size: 18px;
-        transition: transform 0.3s ease;
-    }
-
-    .mobile-nav .nav-item::after {
-        content: "";
-        position: absolute;
-        bottom: 8px;
-        width: 4px;
-        height: 4px;
-        background: var(--primary);
-        border-radius: 50%;
-        opacity: 0;
-        transform: translateY(10px) scale(0);
-        transition: all 0.3s ease;
-    }
-
-    .mobile-nav .nav-item.active i,
-    .mobile-nav .nav-item:hover i {
-        transform: translateY(-8px);
-        color: var(--primary);
-    }
-
-    .mobile-nav .nav-item.active::after,
-    .mobile-nav .nav-item:hover::after {
-        opacity: 1;
-        transform: translateY(0) scale(1.5);
-    }
-
-    .nav-item::after {
-        display: none;
-    }
-
-    .mobile-nav .nav-item::after {
-        display: block;
-    }
-
-    .mobile-nav {
-        height: 70px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background: #ffffff;
-        border-top: 1px solid var(--border);
-    }
-
-    .mobile-nav .nav-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: transparent !important;
-        padding: 0;
-        width: 60px;
-        height: 100%;
-        transition: transform 0.3s ease;
-    }
-
-    .mobile-nav .nav-item i {
-        margin: 0;
-        font-size: 20px;
-        transition: all 0.3s ease;
-    }
-
-    .mobile-nav .nav-item::after {
-        content: "";
-        position: absolute;
-
-        left: 50% !important;
-        top: auto !important;
-        height: 4px !important;
-        width: 12px !important;
-
-        bottom: 12px;
-        transform: translateX(-50%) translateY(10px);
-        background: var(--primary);
-        border-radius: 10px;
-        opacity: 0;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .mobile-nav .nav-item.active i,
-    .mobile-nav .nav-item:hover i {
-        transform: translateY(-10px);
-        color: var(--primary);
-    }
-
-    .mobile-nav .nav-item.active::after,
-    .mobile-nav .nav-item:hover::after {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
 }
