@@ -17,7 +17,7 @@
         <aside class="sidebar">
             <div class="sidebar-top">
                 <div class="logo-box">
-                    <i class="fa-solid fa-layer-group"></i>
+                    <i class="5fa-solid fa-layer-group"></i>
                     <span>Polyglot Studio</span>
                 </div>
                 <nav class="main-nav">
@@ -25,7 +25,8 @@
                             sahifa</span></a>
                     <a href="bugungiDars.html" class="nav-item"><i class="fa-solid fa-book-open"></i> <span>Bugungi
                             dars</span></a>
-                    <a href="test.html" class="nav-item active"><i class="fa-solid fa-vial"></i> <span>Test rejimi</span></a>
+                    <a href="test.html" class="nav-item active"><i class="fa-solid fa-vial"></i> <span>Test
+                            rejimi</span></a>
                     <a href="sozlarArxivi.html" class="nav-item"><i class="fa-solid fa-box-archive"></i> <span>So'zlar
                             arxivi</span></a>
                     <a href="AI.html" class="nav-item"><i class="fa-solid fa-robot"></i> <span>AI yordamchi</span></a>
@@ -60,11 +61,14 @@
                 <nav class="nav">
                     <ul class="list">
                         <a href="test.html">
-                            <li>Tarjima testi</li>
+                            <li class="active">Tarjima testi</li>
                         </a>
                         <a href="./test2.html">
                             <li>So'zni to'ldirish</li>
+                        </a>
+                        <a href="test3.html">
                             <li>Talaffuz testi</li>
+                        </a>
                     </ul>
                 </nav>
 
@@ -86,39 +90,19 @@
                         <button class="test-btn"><span>C</span> Xayr</button>
                         <button class="test-btn"><span>D</span> Iltimos</button>
                     </div>
-                    <div class="sec2-javob">
+                    <div class="sec2-main">
+                        <h1 id="savol-soz"></h1>
+                        <p id="savol">Ushbu so'zning tarjimasini tanlang</p>
+                    </div>
+                    <div id="sec2-javob" class="sec2-javob">
                         <div class="sec2-javob-text-con">
-                            <div class="togri">
-                                <img src="/Background (1).svg" alt="">
-                            </div>
-                            <div class="sec2-javob-text">
-                                <h3 id="natija">To'g'ri</h3>
-                                <p id="togri-javob">Rahmat = спасибо</p>
+                            <div class="sec2-javob-text ">
+                                <h3 id="natija"></h3>
+                                <p id="togriJavob"></p>
                             </div>
                         </div>
+                        <button class="next-btn" onclick="Keyingi()">Keyingi savol<i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <div class="timer-badge">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                </div>
-                <div class="sec2-main">
-                    <h1 id="savol-soz"></h1>
-                    <p id="savol">Ushbu so'zning tarjimasini tanlang</p>
-                </div>
-                <div class="sec2-btn-con">
-                    <button id="btnA"><span>A</span><span id="javob1"></span></button>
-                    <button id="btnB"><span>B</span><span id="javob2"></span></button>
-                    <button id="btnC"><span>C</span><span id="javob3"></span></button>
-                    <button id="btnD"><span>D</span><span id="javob4"></span></button>
-                </div>
-                <div id="sec2-javob" class="sec2-javob">
-                    <div class="sec2-javob-text-con">
-                        <div class="sec2-javob-text ">
-                            <h3 id="natija"></h3>
-                            <p id="togriJavob"></p>
-                        </div>
-                    </div>
-                    <button onclick="Keyingi()">Keyingi savol<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </section>
         </main>
