@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="uz">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Til sayti</title>
+    <title>Til sayti - Kirish</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
-
 <body>
     <div class="kirish">
         <div class="bosh">
@@ -36,7 +28,7 @@
                 <p>EMAIL MANZIL</p>
                 <div class="input1">
                     <i class="fa-regular fa-envelope"></i>
-                    <input id="email" type="email" placeholder="example@mail.com">
+                    <input id="login-email" type="email" placeholder="example@mail.com">
                 </div>
             </div>
 
@@ -45,24 +37,21 @@
                     <p>PAROL</p>
                     <p class="forgot-pass">parolni unutdingizmi?</p>
                 </div>
-                </form>
                 <div class="input1">
                     <i class="fa-solid fa-lock"></i>
-                    <input id="parol" type="password" placeholder="********">
+                    <input id="login-parol" type="password" placeholder="********">
                 </div>
             </div>
-            <a href="boshlash.html">
-                <button onclick="login()" id="boshla" class="kirish-btn">Kirish</button>
-            </a>
+            
+            <button onclick="login()" id="boshla" class="kirish-btn">Kirish</button>
         </div>
 
         <div class="foot">
             <p>Hisobingiz yo'qmi?</p>
-            <p class="sign" onclick="Sign()">Ro'yxatdan o'ting</p>
+            <p class="sign" onclick="goToSignUp()">Ro'yxatdan o'ting</p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>

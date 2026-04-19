@@ -24,7 +24,6 @@ body {
     min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
     width: var(--sidebar-width);
     background: #fff;
@@ -536,14 +535,7 @@ body {
     font-family: 'Inter';
 }
 
-body {
-    margin: 0;
-    padding: 15px 50px;
-    background-color: #FAF8FFCC;
-    display: flex;
-    padding: 20px 0px;
 
-}
 
 .ul h2 {
     color: #4F46E5;

@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="uz">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ro'yxatdan o'tish - РусЯзык</title>
-    <!-- css -->
     <link rel="stylesheet" href="signin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
-
 <body>
     <div class="signin">
-        <div class="img-con">
-            <!-- <img src="./Margin.svg" alt="Logo"> -->
-        </div>
         <div class="title-con">
             <h1>РусЯзык</h1>
             <p>Har kuni 20 ta so'z, bir umr bilim</p>
@@ -28,30 +21,27 @@
             <p>Bepul hisob yarating</p>
         </div>
 
-        <form id="form">
+        <form id="signup-form">
             <div class="input-group">
                 <p class="label">TO'LIQ ISMINGIZ</p>
                 <div class="input-wrapper">
-                    <i class="fa-regular fa-user user"></i>
+                    <i class="fa-regular fa-user"></i>
                     <input id="ism" type="text" placeholder="Ismingizni kiriting" required>
                 </div>
             </div>
 
             <div class="input-group">
                 <p class="label">EMAIL MANZIL</p>
-                <div class="input-wrapper space-between">
-                    <div class="flex-row">
-                        <i class="fa-regular fa-envelope letter"></i>
-                        <input id="email" type="email" placeholder="user@example.com" required>
-                    </div>
-                    <i class="fa-regular fa-circle-check check"></i>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input id="email" type="email" placeholder="user@example.com" required>
                 </div>
             </div>
 
             <div class="input-group">
                 <p class="label">PAROL YARATING</p>
                 <div class="input-wrapper">
-                    <i class="fa-solid fa-lock lock"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <input id="password" type="password" placeholder="********" required>
                 </div>
             </div>
@@ -59,15 +49,14 @@
             <div class="input-group">
                 <p class="label">PAROLNI TASDIQLANG</p>
                 <div class="input-wrapper">
-                    <i class="fa-solid fa-shield-halved shield"></i>
+                    <i class="fa-solid fa-shield-halved"></i>
                     <input id="password-accept" type="password" placeholder="********" required>
                 </div>
             </div>
 
             <div class="shartlar">
                 <input type="checkbox" id="terms" required>
-                <label for="terms">Men <a href="#">Foydalanish shartlari</a> va <a href="#">Maxfiylik siyosatiga</a>
-                    roziman</label>
+                <label for="terms">Men foydalanish shartlariga roziman</label>
             </div>
 
             <div class="btn-con">
@@ -82,5 +71,4 @@
 
     <script src="signin.js"></script>
 </body>
-
 </html>
