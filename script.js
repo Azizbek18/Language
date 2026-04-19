@@ -1,19 +1,19 @@
 const url = 'https://clefdjiuabnztkmdwnjc.supabase.co'
-const token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNsZWZkaml1YWJuenRrbWR3bmpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ5NTE5MzUsImV4cCI6MjA5MDUyNzkzNX0.Ol6JNWvyLpth4rrjVD6TQLzuiA8jXujXmKfzaYtPLhc';
 
-const _supabase = supabase.createClient(url, token)
+const _supabase = supabase.createClient(url, supabaseKey)
 
 const email = document.getElementById("email")
-const password = document.getElementById("password")
+const password = document.getElementById("parol")
 
 async function login() {
-    const { data:foydalanuvchi, error:xatolik } = await _supabase
+    const { data: foydalanuvchi, error: xatolik } = await _supabase
         .from("signin")
         .select("*")
         .eq("email", email.value)
         .eq("parol", password.value)
 
-    if(xatolik){
+    if (xatolik) {
         alert("Xatolik" + xatolik)
         return
     }
@@ -22,8 +22,8 @@ async function login() {
         alert("Siz tizimga kirdiniz")
         window.location.href = "boshlash.html"
     }
-    
-    else{
+
+    else {
         alert("Siz ro'yhatdan o'tmagansiz")
     }
 }
