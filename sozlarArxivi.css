@@ -2,6 +2,7 @@
     --primary: #4338CA;
     --text-main: #1E293B;
     --text-muted: #64748B;
+    --bg-light: #cdd8fc;
 }
 
 * {
@@ -52,7 +53,7 @@ body {
 }
 
 .nav-item.logout:hover {
-    background: #FEF2F2;
+    background: #eaafafb4;
     color: #DC2626;
 }
 
@@ -85,13 +86,13 @@ body {
 }
 
 .nav-item:hover {
-    background: #F1F5F9;
+    background: var(--bg-light);
     color: var(--primary);
     padding-left: 20px;
 }
 
 .nav-item.active {
-    background: #EEF2FF;
+    background: var(--bg-light);
     color: var(--primary);
 }
 
@@ -123,85 +124,16 @@ body {
     margin-top: 5px;
 }
 
-.header {
+.head {
     display: flex;
-    width: 275px;
-    flex-direction: column;
+    min-width: 275px;
     justify-content: space-between;
-    height: 100vh;
-    position: fixed;
+    align-items: center;
     padding: 10px 50px;
 }
 
 .mobile-nav {
     display: none;
-}
-
-.mob-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    transition: all 0.3s ease;
-    border-radius: 12px;
-    color: var(--primary);
-}
-
-.mob-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) scaleY(0);
-    width: 4px;
-    height: 60%;
-    background-color: #3525CD;
-    border-radius: 0 4px 4px 0;
-    transition: transform 0.2s ease-in-out;
-}
-
-.mob-item.active::after,
-.mob-item:hover::after {
-    transform: translateY(-50%) scaleY(1);
-}
-
-.mob-item:hover,
-.mob-item.active {
-    background-color: #F1F5F9;
-}
-
-.mob-item.active i,
-.mob-item:hover i {
-    color: #3525CD;
-}
-
-.mob-item.logout i {
-    color: #EF4444;
-}
-
-.mob-item.logout:hover {
-    background-color: #FEF2F2;
-}
-
-.mob-item.logout:hover {
-    background-color: #FEF2F2;
-}
-
-.mob-item.logout::after {
-    background-color: #EF4444;
-}
-
-.mob-item.logout:hover i {
-    color: #EF4444;
-}
-
-.head {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
 }
 
 .title h2 {
@@ -261,11 +193,13 @@ body {
 }
 
 .modal {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     max-height: 90vh;
     overflow-y: auto;
     background-color: white;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .X {
@@ -572,6 +506,7 @@ main {
     .sidebar {
         width: 80px;
         padding: 20px 10px;
+        min-width: 80px;
     }
 
     .sidebar span,
@@ -586,6 +521,11 @@ main {
     .mobile-nav {
         overflow-x: scroll;
         width: 100%;
+    }
+    
+    .logo-box {
+        align-items: center;
+        justify-content: center;
     }
 }
 

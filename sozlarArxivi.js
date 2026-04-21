@@ -80,12 +80,18 @@ let cardCon = document.getElementById('card-con')
 
 ochish.addEventListener('click', () => {
     modalCon.style.display = 'flex'
+    let mobileNav = document.querySelector('.mobile-nav')
+    mobileNav.style.display = "none"
 })
 X.addEventListener('click', () => {
     modalCon.style.display = 'none'
+    let mobileNav = document.querySelector('.mobile-nav')
+    mobileNav.style.display = "flex"
 })
 cancel.addEventListener('click', () => {
     modalCon.style.display = 'none'
+    let mobileNav = document.querySelector('.mobile-nav')
+    mobileNav.style.display = "flex"
 })
 setInterval(() => {
     const vaqt = new Date()

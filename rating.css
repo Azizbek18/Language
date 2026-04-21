@@ -2,6 +2,7 @@
     --primary: #4338CA;
     --text-main: #1E293B;
     --text-muted: #64748B;
+    --primary-light: #cdd8fc;
 }
 
 * {
@@ -48,7 +49,7 @@ body {
 }
 
 .nav-item.logout:hover {
-    background: #FEF2F2;
+    background: #eaafafb4;
     color: #EF4444;
 }
 
@@ -57,7 +58,6 @@ body {
 }
 
 .nav-item.logout:hover {
-    background: #FEF2F2;
     color: #DC2626;
 }
 
@@ -90,13 +90,13 @@ body {
 }
 
 .nav-item:hover {
-    background: #F1F5F9;
+    background: var(--primary-light);
     color: var(--primary);
     padding-left: 20px;
 }
 
 .nav-item.active {
-    background: #EEF2FF;
+    background: var(--primary-light);
     color: var(--primary);
 }
 
@@ -141,66 +141,6 @@ header {
 
 .mobile-nav {
     display: none;
-}
-
-.mob-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    transition: all 0.3s ease;
-    border-radius: 12px;
-    color: var(--primary);
-}
-
-.mob-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) scaleY(0);
-    width: 4px;
-    height: 60%;
-    background-color: #3525CD;
-    border-radius: 0 4px 4px 0;
-    transition: transform 0.2s ease-in-out;
-}
-
-.mob-item.active::after,
-.mob-item:hover::after {
-    transform: translateY(-50%) scaleY(1);
-}
-
-.mob-item:hover,
-.mob-item.active {
-    background-color: #F1F5F9;
-}
-
-.mob-item.active i,
-.mob-item:hover i {
-    color: #3525CD;
-}
-
-.mob-item.logout i {
-    color: #EF4444;
-}
-
-.mob-item.logout:hover {
-    background-color: #FEF2F2;
-}
-
-.mob-item.logout:hover {
-    background-color: #FEF2F2;
-}
-
-.mob-item.logout::after {
-    background-color: #EF4444;
-}
-
-.mob-item.logout:hover i {
-    color: #EF4444;
 }
 
 .streak p {
@@ -614,27 +554,6 @@ h1 {
         display: none;
     }
 
-    .mob-item {
-        flex: 1;
-        max-width: 70px;
-        min-width: 60px;
-        height: 55px;
-        flex-shrink: 0;
-        border-radius: 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 10px;
-    }
-
-    .mob-item:hover i {
-        padding-left: 5px;
-    }
-
-    .mob-item i {
-        font-size: 20px;
-        transition: .3s;
-    }
 
     main {
         width: 100%;

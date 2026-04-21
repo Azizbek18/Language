@@ -113,7 +113,7 @@ body {
     color: #EF4444;
 }
 
-.nav-item .logout:hover {
+.nav-item.logout:hover {
     background: #eaafafb4;
     color: #EF4444;
 }
@@ -182,11 +182,13 @@ body {
     align-items: center;
     padding-top: 120px;
 }
-.sec2-bosh{
+
+.sec2-bosh {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
+
 .list {
     display: flex;
     width: 100%;
@@ -522,5 +524,15 @@ body {
 
     .mobile-nav {
         padding: 0px 10px;
+    }
+
+    .head .sec2-bosh {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .head-items {
+        justify-content: space-between;
     }
 }
