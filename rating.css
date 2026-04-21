@@ -49,10 +49,10 @@ body {
 }
 
 .nav-item.logout:hover {
-    background: #eaafafb4;
+    background:  #eaafafb4;
     color: #EF4444;
 }
-
+                                                                             
 .nav-item.logout {
     color: #EF4444;
 }
