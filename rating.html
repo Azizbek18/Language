@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- css -->
+    <title>Polyglot Studio - Reyting</title>
     <link rel="stylesheet" href="rating.css">
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Plus Jakata Sans font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -26,14 +21,13 @@
                 <span>Polyglot Studio</span>
             </div>
             <nav class="main-nav">
-                <a href="page4.html" class="nav-item"><i class="fa-solid fa-house"></i> <span>Bosh
-                        sahifa</span></a>
+                <a href="page4.html" class="nav-item"><i class="fa-solid fa-house"></i> <span>Bosh sahifa</span></a>
                 <a href="bugungiDars.html" class="nav-item"><i class="fa-solid fa-book-open"></i> <span>Bugungi
                         dars</span></a>
                 <a href="test.html" class="nav-item"><i class="fa-solid fa-vial"></i> <span>Test rejimi</span></a>
                 <a href="sozlarArxivi.html" class="nav-item"><i class="fa-solid fa-box-archive"></i> <span>So'zlar
                         arxivi</span></a>
-                <a href="AI.html" class="nav-item"><i class="f  a-solid fa-robot"></i> <span>AI yordamchi</span></a>
+                <a href="AI.html" class="nav-item"><i class="fa-solid fa-robot"></i> <span>AI yordamchi</span></a>
                 <a href="rating.html" class="nav-item active"><i class="fa-solid fa-ranking-star"></i>
                     <span>Reyting</span></a>
             </nav>
@@ -45,63 +39,64 @@
                 <span>Chiqish</span></a>
         </div>
     </aside>
+
     <main>
         <header>
             <div class="one">
                 <h1>Assalomu alaykum!</h1>
-                <p>Reytinglar jadvali</p>
+                <p>Reytinglar jadvali — o'z natijalaringizni kuzatib boring</p>
             </div>
             <div class="header-others">
                 <div class="streak">
-                    <img src="/Container.svg" alt="">
+                    <img src="/Container.svg" alt="streak">
                     <p>Kunlik streak: 15</p>
                 </div>
-                <p>24-Oktabr</p>
+                <p class="date-text">24-Oktabr</p>
                 <i class="fa-regular fa-bell bell"></i>
-                <a href="">
-                    <img src="/User Avatar.svg" alt="">
+                <a href="#" class="user-profile">
+                    <img src="/User Avatar.svg" alt="avatar">
                 </a>
             </div>
         </header>
-        <section class="three">
-            <div class="week">
-                <p>Haftalik</p>
+
+        <section class="filter-tabs">
+            <div class="tab week active">Haftalik</div>
+            <div class="tab month">Oylik</div>
+            <div class="tab obs">Umumiy</div>
+        </section>
+
+        <section class="podium-section">
+            <div class="podium-card silver">
+                <div class="avatar-wrapper">
+                    <img src="/Margin (1).svg" alt="Nilufar">
+                    <span class="rank-number">2</span>
+                </div>
+                <p class="user-name">Nilufar X.</p>
+                <div class="score-badge">290 <span>Ball</span></div>
+                <div class="step"></div>
             </div>
-            <div class="month">
-                <p>Oylik</p>
+
+            <div class="podium-card gold">
+                <div class="avatar-wrapper">
+                    <img src="Margin.png" alt="Sardor">
+                    <span class="rank-number">1</span>
+                </div>
+                <p class="user-name">Sardor M.</p>
+                <div class="score-badge">340 <span>Ball</span></div>
+                <div class="step"></div>
             </div>
-            <div class="obs">
-                <p>Umumiy</p>
+
+            <div class="podium-card bronze">
+                <div class="avatar-wrapper">
+                    <img src="Margin (1).png" alt="Akbar">
+                    <span class="rank-number">3</span>
+                </div>
+                <p class="user-name">Akbar Y.</p>
+                <div class="score-badge">260 <span>Ball</span></div>
+                <div class="step"></div>
             </div>
         </section>
-        <section class="stages">
-            <div class="stage stage1">
-                <img width="96px" height="112px" src="/Margin (1).svg" alt="">
-                <div class="text-con">
-                    <p>Nilufar X.</p>
-                    <h1>290 <span>Ball</span></h1>
-                </div>
-                <h2>2</h2>
-            </div>
-            <div class="stage1 stage2 card2">
-                <img width="128px" height="152px" src="Margin.png" alt="">
-                <p>Sardor M.</p>
-                <div class="text-con">
-                    <h1>340 <span>Ball</span></h1>
-                </div>
-                <div class="grade">
-                    <h2>1</h2>
-                </div>
-            </div>
-            <div class="stage stage1 stage3 card3">
-                <img width="96px" height="110px" src="Margin (1).png" alt="">
-                <div class="text-con">
-                    <p>Akbar Y.</p>
-                    <h1>260 <span>Ball</span></h1>
-                </div>
-                <h2>3</h2>
-            </div>
-        </section>
+
         <div class="leaderboard-container">
             <div class="leaderboard-card">
                 <table class="leaderboard-table">
@@ -117,55 +112,55 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank">1</td>
-                            <td class="user">
+                            <td class="td-rank">1</td>
+                            <td class="td-user">
                                 <img src="Margin.png" alt="">
                                 <span>Sardor M.</span>
                             </td>
-                            <td class="points">340</td>
+                            <td class="td-points">340</td>
                             <td>24 kun</td>
                             <td>1,240</td>
-                            <td class="change">-</td>
+                            <td class="td-change">-</td>
                         </tr>
                         <tr>
-                            <td class="rank">2</td>
-                            <td class="user">
+                            <td class="td-rank">2</td>
+                            <td class="td-user">
                                 <img src="/Margin (1).svg" alt="">
                                 <span>Nilufar X.</span>
                             </td>
-                            <td class="points">290</td>
+                            <td class="td-points">290</td>
                             <td>18 kun</td>
                             <td>980</td>
-                            <td class="change up">↑ 1</td>
+                            <td class="td-change up">↑ 1</td>
                         </tr>
                         <tr class="current-user-row">
-                            <td class="rank">3</td>
-                            <td class="user">
+                            <td class="td-rank">3</td>
+                            <td class="td-user">
                                 <img src="Margin (1).png" alt="">
                                 <div>
-                                    <span class="user-name">Akbar Y.</span>
-                                    <span class="badge">O'ZINGIZ</span>
+                                    <span class="name">Akbar Y.</span>
+                                    <span class="me-badge">O'ZINGIZ</span>
                                 </div>
                             </td>
-                            <td class="points">260</td>
+                            <td class="td-points">260</td>
                             <td>15 kun</td>
                             <td>854</td>
-                            <td class="change up">↑ 4</td>
+                            <td class="td-change up">↑ 4</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div class="footer-alert">
-                    <div class="alert-info">
-                        <div class="trophy-icon">🏆</div>
-                        <div>
-                            <strong>Reytingda ko'tarildingiz!</strong><br>
-                            <small>Siz 78 o'quvchidan 3-o'rindasiz</small>
+                    <div class="alert-content">
+                        <div class="trophy-box">🏆</div>
+                        <div class="alert-text">
+                            <strong>Reytingda ko'tarildingiz!</strong>
+                            <p>Siz 78 o'quvchidan 3-o'rindasiz</p>
                         </div>
                     </div>
-                    <div class="next-step">
-                        <div class="step-text">
-                            <small>KEYINGI POG'ONA</small><br>
+                    <div class="alert-actions">
+                        <div class="next-level">
+                            <small>KEYINGI POG'ONA</small>
                             <strong>30 ball qoldi</strong>
                         </div>
                         <button class="btn-continue">Darsni davom ettirish</button>
@@ -176,14 +171,12 @@
     </main>
 
     <nav class="mobile-nav">
-        <a href="page4.html" class="nav-item" title="Bosh sahifa"><i class="fa-solid fa-house"></i></a>
-        <a href="bugungiDars.html" class="nav-item" title="Bugungi dars"><i class="fa-solid fa-book-open"></i></a>
-        <a href="test.html" class="nav-item active" title="Test rejimi"><i class="fa-solid fa-vial"></i></a>
-        <a href="sozlarArxivi.html" class="nav-item" title="So'zlar arxivi"><i class="fa-solid fa-box-archive"></i></a>
-        <a href="AI.html" class="nav-item" title="AI yordamchi"><i class="fa-solid fa-robot"></i></a>
-        <a href="rating.html" class="nav-item" title="Reyting"><i class="fa-solid fa-ranking-star"></i></a>
-        <a href="#" class="nav-item" title="Sozlamalar"><i class="fa-solid fa-gear"></i></a>
-        <a href="#" class="nav-item logout" title="Chiqish"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <a href="page4.html" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="bugungiDars.html" class="nav-item"><i class="fa-solid fa-book-open"></i></a>
+        <a href="test.html" class="nav-item"><i class="fa-solid fa-vial"></i></a>
+        <a href="sozlarArxivi.html" class="nav-item"><i class="fa-solid fa-box-archive"></i></a>
+        <a href="AI.html" class="nav-item"><i class="fa-solid fa-robot"></i></a>
+        <a href="rating.html" class="nav-item"><i class="fa-solid fa-ranking-star"></i></a>
     </nav>
 
     <script src="rating.js"></script>

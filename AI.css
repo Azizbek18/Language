@@ -325,7 +325,6 @@ main {
     }
 
     .xabar {
-
         width: 100%;
         color: #464555;
         display: flex;
@@ -402,7 +401,7 @@ main {
         padding: 0;
     }
 
-    .sidebar  {
+    .sidebar {
         display: none;
     }
 

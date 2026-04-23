@@ -30,7 +30,7 @@ body {
     justify-content: space-between;
     height: 100vh;
     padding: 30px 20px;
-    min-width: 250px; 
+    min-width: 250px;
     background: #fff;
     border-right: 1px solid #F1F5F9;
 }
@@ -303,6 +303,7 @@ main {
 
 .sec2-search {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #F4F3FB;
     padding: 20px;
     border-radius: 20px;
@@ -522,7 +523,7 @@ main {
         overflow-x: scroll;
         width: 100%;
     }
-    
+
     .logo-box {
         align-items: center;
         justify-content: center;
@@ -769,7 +770,7 @@ main {
     .sec2-head-text {
         align-items: center;
         justify-content: space-between;
-        display: flex;   
+        display: flex;
     }
 
     .sec2-head-title {
