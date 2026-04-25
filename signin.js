@@ -1,57 +1,40 @@
-const url = 'https://clefdjiuabnztkmdwnjc.supabase.co'
-const token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN'
+const url = 'https://clefdjiuabnztkmdwnjc.supabase.co';
+const token = 'sb_publishable_IOtRCnm8B19gdABXAPKMqA__1-q_1BN';
+const _supabase = supabase.createClient(url, token);
 
-const _supabase = supabase.createClient(url, token)
+const signupForm = document.getElementById('signup-form');
 
-async function Yuborish() {
-    let ism = document.getElementById('ism')
-    let parol = document.getElementById('password')
-    let email = document.getElementById('email')
+signupForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    if (ism.value == "" && parol.value == "") {
-        alert("Maydonlarni to'ldiring")
-        return
+    const ism = document.getElementById('ism').value;
+    const email = document.getElementById('email').value;
+    const parol = document.getElementById('password').value;
+    const tasdiqParol = document.getElementById('password-accept').value;
+
+    if (parol !== tasdiqParol) {
+        alert("Parollar bir-biriga mos kelmadi!");
+        return;
     }
 
-    const { data: foydalanuvchi, error: xatolik } = await _supabase
+    const { data: mavjudFoydalanuvchi } = await _supabase
         .from('signin')
-        .select('*')
-        .eq('ism', ism.value)
-        .eq('parol', parol.value)
-        .eq('email', email.value)
-    if (xatolik) {
-        alert("Xatolik yuz berdi" + xatolik.message)
-        return
-    }
-    if (foydalanuvchi.length > 0) {
-        alert("Siz ro'yhatdan o'tgan  ekansiz. Kirish qismiga o'ting")
-        window.location.href = "index.html"
-    }
-    else {
-        const { error } = await _supabase
-            .from('signin')
-            .insert([
-                {
-                    ism: ism.value,
-                    parol: parol.value,
-                    email: email.value
-                }
-            ])
-        if (error) {
-            alert("Xatolik yuz berdi" + error.message)
-        }
-        else {
-            alert("Siz ro'yhatdan o'tdingiz tabriklaymiz!!!")
-            window.location.href = 'index.html'
-        }
+        .select('email')
+        .eq('email', email);
+
+    if (mavjudFoydalanuvchi && mavjudFoydalanuvchi.length > 0) {
+        alert("Bu email bilan allaqachon ro'yxatdan o'tilgan!");
+        return;
     }
 
-}
+    const { error } = await _supabase
+        .from('signin')
+        .insert([{ ism: ism, email: email, parol: parol }]);
 
-
-function tozala() {
-    document.getElementById("ism").value = ''
-    document.getElementById("password").value = ''
-    document.getElementById("email").value = ''
-    document.getElementById("password-accept").value = ''
-}
+    if (error) {
+        alert("Xatolik: " + error.message);
+    } else {
+        alert("Siz muvaffaqiyatli ro'yxatdan o'tdingiz!");
+        window.location.href = 'index.html';
+    }
+});
