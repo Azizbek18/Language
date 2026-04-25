@@ -2,13 +2,13 @@
 
 :root {
     --primary: #4338CA;
-    --primary-light: #EEF2FF;
+    --primary-light: #cdd8fc;
     --bg: #F8FAFF;
     --card-bg: #FFFFFF;
     --text-main: #1E293B;
     --text-muted: #64748B;
     --border: #F1F5F9;
-    --sidebar-width: 260px;
+    --sidebar-width: 250px;
     --shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -27,17 +27,14 @@ body {
     overflow-y: auto;
 }
 
-.app-container {
-    display: flex;
-    min-height: 100vh;
-}
-
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
     padding: 30px 20px;
+    min-width: 250px;
+    max-width: 250px;
     background: #fff;
     border-right: 1px solid #F1F5F9;
 }
@@ -47,11 +44,16 @@ body {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
+    width: 100%;
+}
+
+.sidebar-footer .nav-item {
+    margin: 0;
 }
 
 .nav-item.logout:hover {
-    background: #FEF2F2;
+    background: #eaafafb4;
     color: #DC2626;
 }
 
@@ -84,13 +86,13 @@ body {
 }
 
 .nav-item:hover {
-    background: #F1F5F9;
+    background: var(--primary-light);
     color: var(--primary);
     padding-left: 20px;
 }
 
 .nav-item.active {
-    background: #EEF2FF;
+    background: #cdd8fc;
     color: var(--primary);
 }
 
@@ -114,8 +116,10 @@ body {
 
 /* --- 2. СТРУКТУРА (LAYOUT) --- */
 .app-container {
-    overflow-x: hidden;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 html,
@@ -125,30 +129,20 @@ body {
     position: relative;
 }
 
-.sidebar {
-    width: var(--sidebar-width);
-    min-width: var(--sidebar-width);
-    background: #FFFFFF;
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 20px;
-}
-
 .content {
     flex: 1;
-    overflow-y: scroll;
     display: block;
     flex-direction: column;
-    padding: 30px 40px;
 }
 
 .head {
+    background: #fff;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    border-bottom: 1px solid #E2E8F0;
+    min-height: 14vh;
 }
 
 .head h2 {
@@ -187,16 +181,14 @@ body {
 }
 
 .icon-btn {
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid var(--border);
+    background: transparent;
+    /* border: 1px solid var(--border); */
     color: var(--text-muted);
     cursor: pointer;
+    gap: 20px;
+    width: 20%;
 }
 
 .user-avatar {
@@ -212,6 +204,9 @@ body {
     gap: 30px;
     align-items: start;
     width: 100%;
+    overflow-y: scroll;
+    height: 86vh;
+    padding: 30px;
 }
 
 .main-column {
@@ -221,7 +216,6 @@ body {
 }
 
 .content {
-    overflow-y: scroll;
     height: 100vh;
 }
 
@@ -363,7 +357,7 @@ body {
 }
 
 .ai-badge {
-    background: #EEF2FF;
+    background: #cdd8fc;
     color: var(--primary);
     font-size: 10px;
     font-weight: 800;
@@ -614,7 +608,7 @@ body {
 }
 
 .nav-item:hover {
-    background: #F8FAFF;
+    background: var(--primary-light);
     color: var(--primary);
 }
 
@@ -633,9 +627,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .nav-item {
-    }
-
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
@@ -647,9 +638,6 @@ body {
 }
 
 @media (max-width: 992px) {
-    .content {
-        padding: 25px;
-    }
 
     .head {
         margin-bottom: 20px;
@@ -663,23 +651,47 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .sidebar {
+        min-width: 80px;
+        padding: 20px 10px;
+    }
+
+    .sidebar-top {
+        width: 100%;
+    }
+
+    .sidebar-footer {
+        width: 100%;
+    }
+
+    .sidebar span,
+    .logo-box span {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+        width: 60px;
+    }
+
+    .logo-box {
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media (max-width: 768px) {
     body {
         height: 100vh;
     }
-    
+
     .sidebar {
         display: none;
     }
 
     .app-container {
         display: block;
-    }
-
-    .content {
-        padding: 20px 15px 100px;
     }
 
     .mobile-nav {
@@ -694,6 +706,13 @@ body {
         justify-content: space-around;
         align-items: center;
         z-index: 1000;
+        gap: 15px;
+        padding: 0px 10px;
+        overflow-x: auto;
+    }
+
+    .nav-item.logout {
+        margin: 0;
     }
 
     .main-word {
@@ -707,7 +726,6 @@ body {
     .content {
         box-sizing: border-box;
         width: 100%;
-        padding: 20px 15px 100px;
     }
 
     .word-card,
@@ -724,69 +742,72 @@ body {
         word-break: break-word;
         font-size: 36px;
     }
+
+    .head {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .dashboard-grid {
+        padding-top: 130px;
+        height: 90%;
+    }
 }
 
 @media (max-width: 520px) {
     .head {
-        /* Текст уходит наверх, иконки вниз */
-        align-items: flex-start;
-        /* Выравнивание по левому краю */
-        gap: 16px;
-        margin-bottom: 25px;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         display: flex;
+        flex-direction: row;
+        padding: 10px 10px;
     }
 
     .head-items {
         width: 50%;
-        /* Блок с иконками растягивается на всю ширину */
-        justify-content: flex-start;
-        /* Иконки идут друг за другом слева */
+        justify-content: space-around;
         display: flex;
         align-items: center;
         gap: 12px;
     }
 
-    /* Делаем стрик чуть компактнее, чтобы он не доминировал */
     .streak-badge {
         padding: 6px 12px;
         font-size: 11px;
         white-space: nowrap;
-        /* Чтобы текст не переносился внутри кнопки */
         height: 36px;
-        /* Выравниваем высоту с аватаром */
     }
 
     .head h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin: 0;
     }
 
-    /* Уменьшаем иконки и аватар, чтобы они не вылезали за края на 320px */
-    .icon-btn,
-    .user-avatar {
-        width: 36px;
-        height: 36px;
-        flex-shrink: 0;
-        /* Чтобы аватар не сплющило */
+    .icon-btn {
+        width: max-content;
     }
 
     .title {
         width: 50%;
+    }
+
+    .mobile-nav {
+        overflow-x: auto;
     }
 }
 
 @media (max-width: 480px) {
 
     .content {
-        padding: 20px 12px 90px !important;
         width: 100%;
-        box-sizing: border-box;
     }
 
     .head {
-        align-items: flex-start;
+        align-items: center;
         gap: 15px;
+        flex-direction: column;
     }
 
     .title {
@@ -799,8 +820,8 @@ body {
     }
 
     .head-items {
-        width: 50%;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: space-between;
         gap: 5px;
     }
 
@@ -857,6 +878,17 @@ body {
     .accuracy-bar {
         width: 100%;
     }
+
+    .mobile-nav {
+        padding: 0px 10px;
+        gap: 15px;
+    }
+
+    .dashboard-grid {
+        padding: 0px 20px;
+        padding-bottom: 80px;
+    }
+
 }
 
 @media (max-width: 350px) {
@@ -879,10 +911,10 @@ body {
     .mobile-nav {
         display: flex !important;
         height: 60px;
-        padding: 0 5px;
+        padding: 0 10px;
         gap: 10px;
         align-items: center;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     .mobile-nav .nav-item {
@@ -902,7 +934,6 @@ body {
 
     .head {
         flex-direction: column;
-        align-items: flex-start;
         gap: 10px;
         align-items: center;
         justify-content: center;
@@ -911,9 +942,10 @@ body {
     .head-items {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         gap: 8px;
         flex-wrap: nowrap;
+        text-align: center;
     }
 
     .word-card {
@@ -940,8 +972,8 @@ body {
         display: inline-block;
     }
 
-    .head-items .icon-btn:not(.user-avatar) {
-        display: none;
+    .head-items .icon-btn {
+        gap: 10px;
     }
 
     .dashboard-grid,
